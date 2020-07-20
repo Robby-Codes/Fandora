@@ -5,3 +5,97 @@
     padding: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+/* Introduction Section */
+
+.introduction {
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+
+/* Introduction (top-left) */
+
+.intro-top-left {
+    width: 100%;
+    height: 50%;
+    padding: 50px 0 0 20px;
+    background-color: lightblue;
+    position: relative;
+    z-index: 1;
+}
+
+.logo {
+    color: #dcd4cc;
+    height: 100px;
+    width: 100px;
+    border: 3px solid #dcd4cc;
+    border-radius: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.intro-top-left form div {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-top-left img {
+    height: 20px;
+    width: 20px;
+}
+
+.intro-top-left select,
+.intro-top-left input {
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Introduction (top-right) */
+
+.intro-top-right {
+    color: #FFFCF5;
+    height: 500px;
+    width: 200%;
+    background-color: #33373A;
+    padding-right: 60%;
+    position: relative;
+    transform: rotate(135deg);
+    top: -50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.intro-top-right div {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    transform: rotate(-135deg);
+}
+
+.intro-top-right div button {
+    cursor: pointer;
+    color: #FFFCF5;
+    height: 40px;
+    width: 200px;
+    background-color: transparent;
+    border: 2px solid #FFFCF5;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+
