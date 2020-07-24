@@ -50,6 +50,10 @@ section.banner-section {
     height: 100%;
     width: 25%;
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-content .images-container {
@@ -57,3 +61,21 @@ section.banner-section {
     width: 50%;
     background-color: green;
 }
+
+.material, .color {
+    height: 25%;
+    width: 15%;
+    background-color: yellow;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.material input, .color input {
+    cursor: pointer;
+    width: 80%;
+    height: 80%;
+}
+
