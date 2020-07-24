@@ -5,3 +5,33 @@
     padding: 0;
 }
 
+/* Navigation Bar */
+
+nav {
+    height: 8vh;
+    width: 100%;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+
+nav .nav-links {
+    font-size: 0.7em;
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    cursor: pointer;
+}
+
+nav .cart-num {
+    color: red;
+}
+
+/* Banner Section */
+
