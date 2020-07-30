@@ -7,12 +7,13 @@
 
 body {
     background-color: #f5f5f5;
+    overflow-x: hidden;
 }
 
 /* Navigation */
 
 #navigation {
-    height: auto;
+    height: 8vh;
     width: 100%;
     margin-top: 50px;
     position: fixed;
@@ -34,7 +35,7 @@ body {
 }
 
 .nav-home {
-    color: #373634;
+    color: #282828;
     font-weight: bold;
 }
 
@@ -52,4 +53,77 @@ body {
 .message {
     color: #6e6e6e;
     font-size: 0.9em;
+}
+
+/* Introduction Section */
+
+#intro-section {
+    height: 100vh;
+    width: 100%;
+    padding: 20vh 100px 0 100px;
+}
+
+.intro-content-container > h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: #282828;
+    margin-bottom: 30px;
+}
+
+.intro-message {
+    color: #6e6e6e;
+    width: 50%;
+}
+
+.intro-message > p {
+    margin-bottom: 20px;
+}
+
+.banner-btn {
+    color: #f5f5f5;
+    height: 120px;
+    width: 120px;
+    background-color: #282828;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    box-shadow: 5px 5px 5px black;
+}
+
+.banner-btn h1 {
+    font-size: 0.9em;
+    padding-bottom: 10px;
+}
+
+.banner-btn p {
+    font-size: 1.2em;
+}
+
+.intro-message > div {
+    display: flex;
+    align-items: center;
+}
+
+.btn-extra {
+    text-align: center;
+}
+
+.btn-extra h1 {
+    color: #282828;
+}
+
+.btn-extra p {
+    color: #6e6e6e;
+}
+
+.banner-image img {
+    width: 85%;
+    position: relative;
+    left: 29%;
+    bottom: 180px; 
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
