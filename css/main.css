@@ -237,10 +237,69 @@ body {
     margin-top: 50px;
 }
 
+/* Product Section */
+
+#product-section {
+    width: 100%;
+    padding: 0 100px 0 100px;
+}
+
+#product-section > h1 {
+    color: #aaaaaa;
+    font-size: 5em;
+    margin-bottom: 50px;
+}
+
+.car-container {
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.car-container > h1 {
+    font-size: 3em;
+    color: #282828;
+    margin-bottom: 30px;
+}
+
+.car-content {
+    width: 100%;
+    display: flex;
+}
+
+.car-info, .car-image {
+    width: 50%;
+}
+
+.car-info p {
+    color: #979797;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+.car-info button {
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #979797;
+    height: 100px;
+    width: 100px;
+    background-color: #282828;
+    border: 2px solid #282828;
+    border-radius: 100%;
+}
+
+.car-image img {
+    width: 100%;
+    background-color: #282828;
+    border: 5px solid #282828;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+}
+
 /* Footer Section */
 
 footer {
-    padding: 100px 15% 100px 15%;
+    padding: 50px 15% 100px 15%;
 }
 
 .footer-container {
