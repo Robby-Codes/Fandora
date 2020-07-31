@@ -10,6 +10,23 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    padding: 2.5px;
+ }
+
+::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+     background: #282828;
+     border-radius: 6px;
+     border: #282828 1px solid;
+ }
+
 /* Navigation */
 
 #navigation {
@@ -20,6 +37,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 99;
 }
 
 .nav-btn-container {
@@ -58,9 +76,9 @@ body {
 /* Introduction Section */
 
 #intro-section {
-    height: 100vh;
+    height: auto;
     width: 100%;
-    padding: 20vh 100px 0 100px;
+    padding: 20vh 100px 50px 100px;
 }
 
 .intro-content-container > h1 {
@@ -119,6 +137,10 @@ body {
     color: #6e6e6e;
 }
 
+.banner-image {
+    height: 200px;
+}
+
 .banner-image img {
     width: 85%;
     position: relative;
@@ -126,4 +148,86 @@ body {
     bottom: 180px; 
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+}
+
+.intro-bonus {
+    width: 100%;
+    display: flex;
+}
+
+.bonus-image {
+    width: 50%;
+}
+
+.bonus-image {
+    display: flex;
+    align-items: center;
+}
+
+.jet1, .jet2 {
+    width: 40%;
+    margin-right: 30px;
+}
+
+.bonus-text {
+    width: 50%;
+}  
+
+.bonus-text h1 {
+    color: #282828;
+    margin-bottom: 20px;
+}
+
+.bonus-text p {
+    color: #6e6e6e;
+}
+
+.intro-review {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media1, .media2, .media3 {
+    width: 33.33%;
+    text-align: center;
+}
+
+.media1 {
+    font-weight: bolder;
+    font-size: 1.8em;
+}
+
+.media2 {
+    font-size: 0.7em;
+}
+
+.media3 {
+    font-size: 0.9em;
+}
+
+.quote {
+    color: #6e6e6e;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.intro-review img {
+    height: 20px;
+    width: 20px;
+}
+
+.quote button {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border: 2px solid #282828;
+    margin-top: 50px;
 }
