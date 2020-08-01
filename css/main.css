@@ -38,7 +38,6 @@ body {
 /* Navigation */
 
 #navigation {
-    height: 8vh;
     width: 60%;
     padding-top: 10px;
     border: 2px solid transparent;
@@ -57,15 +56,23 @@ body {
 
 .nav-buttons, .nav-home {
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: normal;
     color: #6e6e6e;
     margin-right: 25px;
 }
 
 .nav-home {
-    color: #282828;
     font-weight: bold;
+}
+
+#navigation h1 {
+    height: 30px;
+    padding: 3px 8px 2px 8px;
+    border: 2px solid transparent;
+    border-radius: 100px;
+    background-color: transparent;
+    margin-bottom: 5px;
 }
 
 #navigation a {
@@ -86,6 +93,7 @@ body {
 .message {
     color: #6e6e6e;
     font-size: 0.9em;
+    margin-bottom: 10px;
 }
 
 /* Introduction Section */
@@ -420,4 +428,21 @@ button:hover {
 
 #intro-section button:hover img {
     content: url("../images/down-arrow2.png");
+}
+
+/*Navigation Bar Link Animations */
+
+@keyframes linkHover {
+    from {
+    }
+    to {
+        color: #282828;
+        font-weight: bold;
+        border: 2px solid #282828;
+    }
+}
+
+#navigation h1:hover {
+    animation: linkHover 0.5s;
+    -webkit-animation-fill-mode: forwards;
 }

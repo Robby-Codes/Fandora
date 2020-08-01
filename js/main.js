@@ -14,10 +14,12 @@ function navScroll (element) {
             var position = element[x].getBoundingClientRect().top;
             if (position - windowHeight <= 0) {
                 nav.style.transition = "all 0.5s";
-                nav.style.backgroundColor = "white";
+                nav.style.backgroundColor = "#f5f5f5";
+                nav.style.border = "5px solid #282828";
             } else if (position - windowHeight > 0) {
                 nav.style.transition = "all 0.5s";
                 nav.style.backgroundColor = "transparent";
+                nav.style.borderColor = "transparent";
             }
         }
     })
@@ -46,7 +48,6 @@ const carPic7 = document.getElementsByClassName("p7");
 const carPic8 = document.getElementsByClassName("p8");
 const carPic9 = document.getElementsByClassName("p9");
 const carPic10 = document.getElementsByClassName("p10");
-
 
 carScroll (carPic1);
 carScroll (carPic2);
