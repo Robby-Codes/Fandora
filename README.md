@@ -1,2 +1,2 @@
 # Fandora
-A fictional product page create to showcase a set of different watches. I created this project using HTML, CSS, and JavaScript.
+A fictional product page created to showcase different luxury cars. I created this project using HTML, CSS, and JavaScript.
