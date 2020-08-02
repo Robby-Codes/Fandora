@@ -39,10 +39,10 @@ body {
 
 #navigation {
     width: 60%;
-    padding-top: 10px;
-    border: 2px solid transparent;
+    padding: 10px 0 10px 0;
+    border: 5px solid transparent;
     border-radius: 50px;
-    margin-top: 50px;
+    margin-top: 30px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,6 @@ body {
 .message {
     color: #6e6e6e;
     font-size: 0.9em;
-    margin-bottom: 10px;
 }
 
 /* Introduction Section */
@@ -101,7 +100,7 @@ body {
 #intro-section {
     height: auto;
     width: 100%;
-    padding: 20vh 100px 50px 100px;
+    padding: 180px 100px 20px 100px;
 }
 
 .intro-content-container > h1 {
@@ -269,12 +268,13 @@ body {
 }
 
 #product-section > h1 {
-    color: #aaaaaa;
+    color: #282828;
     font-size: 5em;
     text-decoration: underline;
 }
 
 .car-container {
+    height: 450px;
     width: 100%;
     margin-bottom: 100px;
 }
@@ -346,13 +346,13 @@ footer {
 .footer-links {
     color: #6e6e6e;
     display: flex;
-    justify-content: space-between;
     text-transform: uppercase;
     margin-bottom: 50px;
 }
 
 .footer-links a {
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .other-links {
