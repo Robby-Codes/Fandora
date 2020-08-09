@@ -78,3 +78,44 @@ function carScroll (element) {
         }
     })
 }
+
+
+/* Adding Products To Cart */
+
+const cartAmount = document.getElementsByTagName("sub")[0];
+
+const cartBtn1 = document.getElementsByClassName("ac-shelby-cobra-cart")[0];
+const cartBtn2 = document.getElementsByClassName("audi-r8-cart")[0];
+const cartBtn3 = document.getElementsByClassName("audi-r8-spyder-cart")[0];
+const cartBtn4 = document.getElementsByClassName("bugatti-chiron-cart")[0];
+const cartBtn5 = document.getElementsByClassName("chevrolet-camaro-ss-cart")[0];
+const cartBtn6 = document.getElementsByClassName("delorean-cart")[0];
+const cartBtn7 = document.getElementsByClassName("ford-thunderbird-cart")[0];
+const cartBtn8 = document.getElementsByClassName("mclaren-f1-cart")[0];
+const cartBtn9 = document.getElementsByClassName("peogeot-onyx-cart")[0];
+
+cartBtn1.addEventListener("click", addToCart);
+cartBtn2.addEventListener("click", addToCart);
+cartBtn3.addEventListener("click", addToCart);
+cartBtn4.addEventListener("click", addToCart);
+cartBtn5.addEventListener("click", addToCart);
+cartBtn6.addEventListener("click", addToCart);
+cartBtn7.addEventListener("click", addToCart);
+cartBtn8.addEventListener("click", addToCart);
+cartBtn9.addEventListener("click", addToCart);
+
+function addToCart () {
+    current = parseInt(cartAmount.innerHTML);    
+    current += 1;
+    cartAmount.innerHTML = current.toString();
+    cartAmount.style.color = "green";
+}
+
+function subFromCart () {
+    current = parseInt(cartAmount.innerHTML);    
+    current -= 1;
+    cartAmount.innerHTML = current.toString();
+    if (cartAmount.innerHTML === "0") {
+        cartAmount.style.color = "red";
+    }
+}
