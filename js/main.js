@@ -94,28 +94,40 @@ const cartBtn7 = document.getElementsByClassName("ford-thunderbird-cart")[0];
 const cartBtn8 = document.getElementsByClassName("mclaren-f1-cart")[0];
 const cartBtn9 = document.getElementsByClassName("peogeot-onyx-cart")[0];
 
-cartBtn1.addEventListener("click", addToCart);
-cartBtn2.addEventListener("click", addToCart);
-cartBtn3.addEventListener("click", addToCart);
-cartBtn4.addEventListener("click", addToCart);
-cartBtn5.addEventListener("click", addToCart);
-cartBtn6.addEventListener("click", addToCart);
-cartBtn7.addEventListener("click", addToCart);
-cartBtn8.addEventListener("click", addToCart);
-cartBtn9.addEventListener("click", addToCart);
+cartBrain(cartBtn1);
+cartBrain(cartBtn2);
+cartBrain(cartBtn3);
+cartBrain(cartBtn4);
+cartBrain(cartBtn5);
+cartBrain(cartBtn6);
+cartBrain(cartBtn7);
+cartBrain(cartBtn8);
+cartBrain(cartBtn9);
 
-function addToCart () {
+function cartBrain (element) {
+    if (element.innerHTML === "Add to Cart") {
+        element.onclick = function () {addToCart(element)};
+    } else if (element.innerHTML === "Remove") {
+        element.onclick = function () {subFromCart(element)};
+    }
+}
+
+function addToCart(element) {
+    element.innerHTML = "Remove";
     current = parseInt(cartAmount.innerHTML);    
     current += 1;
     cartAmount.innerHTML = current.toString();
     cartAmount.style.color = "green";
+    cartBrain(element);
 }
 
-function subFromCart () {
+function subFromCart(element) {
+    element.innerHTML = "Add to Cart";
     current = parseInt(cartAmount.innerHTML);    
     current -= 1;
     cartAmount.innerHTML = current.toString();
     if (cartAmount.innerHTML === "0") {
         cartAmount.style.color = "red";
     }
+    cartBrain(element);
 }
