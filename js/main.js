@@ -80,29 +80,19 @@ function carScroll (element) {
 }
 
 
-/* Adding Products To Cart */
+/* Updating Cart Number Shown In Navigation Bar */
 
 const cartAmount = document.getElementsByTagName("sub")[0];
 
-const cartBtn1 = document.getElementsByClassName("ac-shelby-cobra-cart")[0];
-const cartBtn2 = document.getElementsByClassName("audi-r8-cart")[0];
-const cartBtn3 = document.getElementsByClassName("audi-r8-spyder-cart")[0];
-const cartBtn4 = document.getElementsByClassName("bugatti-chiron-cart")[0];
-const cartBtn5 = document.getElementsByClassName("chevrolet-camaro-ss-cart")[0];
-const cartBtn6 = document.getElementsByClassName("delorean-cart")[0];
-const cartBtn7 = document.getElementsByClassName("ford-thunderbird-cart")[0];
-const cartBtn8 = document.getElementsByClassName("mclaren-f1-cart")[0];
-const cartBtn9 = document.getElementsByClassName("peogeot-onyx-cart")[0];
-
-cartBrain(cartBtn1);
-cartBrain(cartBtn2);
-cartBrain(cartBtn3);
-cartBrain(cartBtn4);
-cartBrain(cartBtn5);
-cartBrain(cartBtn6);
-cartBrain(cartBtn7);
-cartBrain(cartBtn8);
-cartBrain(cartBtn9);
+cartBrain(document.getElementsByClassName("ac-shelby-cobra-cart")[0]);
+cartBrain(document.getElementsByClassName("audi-r8-cart")[0]);
+cartBrain(document.getElementsByClassName("audi-r8-spyder-cart")[0]);
+cartBrain(document.getElementsByClassName("bugatti-chiron-cart")[0]);
+cartBrain(document.getElementsByClassName("chevrolet-camaro-ss-cart")[0]);
+cartBrain(document.getElementsByClassName("delorean-cart")[0]);
+cartBrain(document.getElementsByClassName("ford-thunderbird-cart")[0]);
+cartBrain(document.getElementsByClassName("mclaren-f1-cart")[0]);
+cartBrain(document.getElementsByClassName("peogeot-onyx-cart")[0]);
 
 function cartBrain (element) {
     if (element.innerHTML === "Add to Cart") {

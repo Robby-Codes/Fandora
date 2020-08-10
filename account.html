@@ -6,10 +6,43 @@
         <meta name="keywords" content="car, vehicle, automobile, luxy cars">
         <meta name="description" content="Fictional product page for automobiles.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fandora 3D</title>
-        <link rel="stylesheet" type="text/css" href="css/3dview.css">
+        <title>Fandora Account</title>
+        <link rel="stylesheet" type="text/css" href="css/account.css">
+        <script src="js/account.js" defer></script>
     </head>
     <body>
-
+        <nav id="navigation">
+            <div class="nav-btn-container">
+                <a href="."><h1 class="nav-home">FANDORA</h1></a>
+                <a class="product-link"><h1 class="nav-buttons">PRODUCTS</h1></a>
+                <a><h1 class="nav-buttons">ACCOUNT</h1></a>
+                <a><h1 class="nav-buttons">CART<sub>0</sub></h1></a>
+            </div>
+            <div class="nav-line"></div>
+            <div class="message">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae libero tempore.
+            </div>
+        </nav>
+        <section id="log-in-section">
+            <div class="form-container">
+                <form action="." method="GET">
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username">    
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password">    
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit">
+                        <div>
+                            <h1>Don't Have An Account?</h1>
+                            <button>New Account?</button>    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </body>
 </html>
