@@ -96,9 +96,13 @@ cartBrain(document.getElementsByClassName("peogeot-onyx-cart")[0]);
 
 function cartBrain (element) {
     if (element.innerHTML === "Add to Cart") {
-        element.onclick = function () {addToCart(element)};
+        element.onclick = function () {
+            addToCart(element);
+        };
     } else if (element.innerHTML === "Remove") {
-        element.onclick = function () {subFromCart(element)};
+        element.onclick = function () {
+            subFromCart(element);
+        };
     }
 }
 
@@ -120,4 +124,15 @@ function subFromCart(element) {
         cartAmount.style.color = "red";
     }
     cartBrain(element);
+}
+
+
+/* Memorizing What The User Adds To Cart To Update Other Pages */
+
+const carInfo = {
+
+}
+
+function memorize () {
+    
 }
