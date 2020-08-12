@@ -78,14 +78,19 @@ function updatePrice (price) {
 }
 
 
-// Update The Cart Number Found Inside The Navigation Bar
-const cartAmount = document.getElementsByTagName("sub")[0];
+// Update The Cart Numbers
+const cartAmount_1 = document.getElementsByTagName("sub")[0];
+const cartAmount_2 = document.getElementsByClassName("cart-amount")[0];
 
 function subFromCart() {
-    let current = parseInt(cartAmount.innerHTML);    
-    current -= 1;
-    cartAmount.innerHTML = current.toString();
-    if (cartAmount.innerHTML === "0") {
-        cartAmount.style.color = "red";
+    let current1 = parseInt(cartAmount_1.innerHTML);
+    current1 -= 1;
+    cartAmount_1.innerHTML = current1.toString();
+    if (cartAmount_1.innerHTML === "0") {
+        cartAmount_1.style.color = "red";
     }
+
+    let current2 = parseInt(cartAmount_2.innerHTML);    
+    current2 -= 1;
+    cartAmount_2.innerHTML = current2.toString();
 }
