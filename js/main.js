@@ -1,4 +1,3 @@
-
 /* NAVIGATION BAR ANIMATION ON SCROLL */
 
 const nav = document.getElementById("navigation");
@@ -9,7 +8,7 @@ navScroll(mark);
 function navScroll (element) {
     var windowHeight = window.innerHeight;
     window.addEventListener("scroll", () => {
-        for (var x = 0; x < element.length; i++) {
+        for (var x = 0; x < element.length; x++) {
             var elem = element[x];
             var position = element[x].getBoundingClientRect().top;
             if (position - windowHeight <= 0) {
@@ -63,7 +62,7 @@ carScroll (carPic10);
 function carScroll (element) {
     var windowHeight = window.innerHeight;
     window.addEventListener("scroll", () => {
-        for (var x = 0; x < element.length; i++) {
+        for (var x = 0; x < element.length; x++) {
             var elem = element[x];
             var position = element[x].getBoundingClientRect().top;
             if (position - windowHeight <= 0) {
@@ -98,17 +97,19 @@ function cartBrain (element) {
     if (element.innerHTML === "Add to Cart") {
         element.onclick = function () {
             addToCart(element);
+            updateCarsInCart(element, "add");
         };
     } else if (element.innerHTML === "Remove") {
         element.onclick = function () {
             subFromCart(element);
+            updateCarsInCart(element, "remove");
         };
     }
 }
 
 function addToCart(element) {
     element.innerHTML = "Remove";
-    current = parseInt(cartAmount.innerHTML);    
+    let current = parseInt(cartAmount.innerHTML);    
     current += 1;
     cartAmount.innerHTML = current.toString();
     cartAmount.style.color = "green";
@@ -117,22 +118,11 @@ function addToCart(element) {
 
 function subFromCart(element) {
     element.innerHTML = "Add to Cart";
-    current = parseInt(cartAmount.innerHTML);    
+    let current = parseInt(cartAmount.innerHTML);    
     current -= 1;
     cartAmount.innerHTML = current.toString();
     if (cartAmount.innerHTML === "0") {
         cartAmount.style.color = "red";
     }
     cartBrain(element);
-}
-
-
-/* Memorizing What The User Adds To Cart To Update Other Pages */
-
-const carInfo = {
-
-}
-
-function memorize () {
-    
 }
