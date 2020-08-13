@@ -452,7 +452,6 @@ footer {
 }
 
 .footer-links {
-    color: #6e6e6e;
     display: flex;
     text-transform: uppercase;
     margin-bottom: 50px;
@@ -479,6 +478,7 @@ footer {
 }
 
 footer a {
+    color: #6e6e6e;
     cursor: pointer;
 }
 
