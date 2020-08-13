@@ -126,3 +126,36 @@ function subFromCart(element) {
     }
     cartBrain(element);
 }
+
+
+/* Cover Page Car/Loading Animations */
+
+const air1 = document.getElementsByClassName("v1")[0];
+const air2 = document.getElementsByClassName("v2")[0];
+const air3 = document.getElementsByClassName("v3")[0];
+const air4 = document.getElementsByClassName("v4")[0];
+
+const carAir1 = document.getElementsByClassName("car-air-1")[0];
+const carAir2 = document.getElementsByClassName("car-air-2")[0];
+const carAir3 = document.getElementsByClassName("car-air-3")[0];
+
+const car1 = document.getElementsByClassName("car-image-1")[0];
+const car2 = document.getElementsByClassName("car-image-2")[0];
+
+const loadingBar = document.getElementsByClassName("bar")[0];
+const coverPage = document.getElementById("cover");
+
+const bodyOverflow = document.getElementsByTagName("body")[0];
+
+onload = loadingFunction;
+
+function loadingFunction() {
+    loadingBar.style.transition = "all 4s";
+    loadingBar.style.width = "100%";
+    coverPage.style.transition = "all 1s 5s";
+    coverPage.style.opacity = "0";
+    setTimeout(function () {
+        coverPage.style.display = "none";
+        bodyOverflow.style.overflowY = "auto";
+    }, 5500);
+}

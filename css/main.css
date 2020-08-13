@@ -11,12 +11,14 @@ body {
     align-items: center;
     background-color: #f5f5f5;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 ::selection {
     color: white;
     background-color: black;
 }
+
 
 /* Custom Scrollbar */
 
@@ -35,7 +37,104 @@ body {
      border: #282828 1px solid;
  }
 
-/* Navigation */
+
+/* Cover Sectin */
+
+#cover {
+    height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+
+#cover h1 {
+    font-size: 5em;
+}
+
+.cover-content {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-image-1 {
+    height: 100px;
+}
+
+.air {
+    width: 40%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+}
+
+.v1 {top: 20%; right: -100%;}
+.v2 {top: 40%; right: -100%; }
+.v3 {top: 65%; right: -100%; }
+.v4 {top: 75%; right: -100%;}
+
+.car-air-1, .car-air-2, .car-air-3 {
+    height: 1px;
+    width: 10px;
+    background-color: black;
+    position: relative;
+}
+
+.car-air-1 {top: 5px; right: 20%;}
+.car-air-2 {top: 10px; right: 20%;}
+.car-air-3 {right: 20%;}
+
+.loading-bar {
+    width: 50%;
+    height: 20px;
+    border: 3px solid #282828;
+    border-radius: 100px;
+    position: absolute;
+    bottom: 40%;
+}
+
+.bar {
+    width: 1%;
+    height: 100%;
+    background-color: #6e6e6e;
+    border-radius: 100px;
+}
+
+/* Cover/Loading Page Animations */
+
+@keyframes carShake {
+    0% {transform: translate(0px, 2px);}
+    25% {transform: translate(2px, 0);}
+    50% {transform: translate(0px, 2px);}
+    100% {transform: translate(2px, 0);}
+}
+
+.car-image-1 {animation: carShake 0.5s infinite;}
+
+@keyframes carAir1 {to{transform: translate(-50px, 0);}}
+@keyframes carAir2 {to{transform: translate(-60px, 0);}}
+@keyframes carAir3 {to{transform: translate(-45px, 0);}}
+
+.car-air-1 {animation: carAir1 0.5s 0.8s infinite;}
+.car-air-2 {animation: carAir2 0.5s 0.5s infinite;}
+.car-air-3 {animation: carAir3 0.5s 0.2s infinite;}
+
+@keyframes air1 {to{transform: translate(-800%);}}
+
+.v1 {animation: air1 1s 0.5s infinite;}
+.v2 {animation: air1 1s 0.8s infinite;}
+.v3 {animation: air1 1s 1s infinite;}
+.v4 {animation: air1 1s 0.2s infinite;}
+
+
+ /* Navigation */
 
 #navigation {
     width: 60%;
@@ -94,6 +193,7 @@ body {
     color: #6e6e6e;
     font-size: 0.9em;
 }
+
 
 /* Introduction Section */
 
@@ -260,6 +360,7 @@ body {
     margin-top: 50px;
 }
 
+
 /* Product Section */
 
 #product-section {
@@ -326,6 +427,12 @@ body {
     transform: translate(50px);
 }
 
+a {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+
 /* Footer Section */
 
 footer {
@@ -388,6 +495,7 @@ footer a {
     margin-right: 30px;
 }
 
+
 /* Button Animations */
 
 @keyframes btnHover {
@@ -430,6 +538,7 @@ button:hover {
 #intro-section button:hover img {
     content: url("../images/down-arrow2.png");
 }
+
 
 /*Navigation Bar Link Animations */
 
