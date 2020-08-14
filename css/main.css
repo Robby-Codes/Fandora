@@ -564,6 +564,10 @@ button:hover {
     
     /* Changes to Cover Section */
 
+    #cover {
+        height: 100%;
+    }
+
     #cover h1 {
         font-size: 3em;
     }
@@ -581,13 +585,20 @@ button:hover {
     .car-air-3 {right: 30%;}
     
     .loading-bar {
-        width: 40%;
+        width: 80%;
         height: 15px;
         bottom: 37%;
     }
     
     /* Changes to Navigation */
-    
+
+    #navigation {
+        position: static;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        padding: 5px;
+    }
+
     .nav-buttons, .nav-home {
         font-size: 0.7em;
         margin-right: 5px;
@@ -609,7 +620,7 @@ button:hover {
     /* Changes to Introduction Section */
 
     #intro-section {
-        padding: 150px 20px 20px 20px;
+        padding: 20px 20px 20px 20px;
     }
     
     .intro-content-container > h1 {
@@ -715,17 +726,18 @@ button:hover {
     .quote button {
         height: 30px;
         width: 80px;
-        margin-top: 100px;
+        margin-top: 50px;
     }
     
     /* Changes to Product Section */
 
     #product-section {
-        padding: 120px 20px 0 20px;
+        padding: 100px 20px 0 20px;
     }
     
     #product-section > h1 {
         font-size: 2em;
+        margin-bottom: 50px;
     }
     
     .car-container {
@@ -736,6 +748,7 @@ button:hover {
     .car-container > h1 {
         font-size: 1.5em;
         margin-bottom: 20px;
+        text-align: center;
     }
     
     .car-content {
@@ -820,10 +833,695 @@ button:hover {
         margin-top: 50px;
         padding-right: 50%;
     }
+
+    /* Changes to Button Animations */
+
+    @keyframes btnHover {
+        to {
+        }
+    }
+
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+
+    button {
+        outline: none;
+        animation: btnHoverOff 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    button:hover {
+        animation: btnHover 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #intro-section button:active img {
+        content: url("../images/down-arrow.png");
+    }
+
+
+    /* Changes to Navigation Bar Link Animations */
+
+    @keyframes linkHover {
+        from {
+        }
+        to {
+        }
+    }
+
+    #navigation h1:hover {
+        animation: linkHover 0.5s;
+        -webkit-animation-fill-mode: forwards;
+    }
             
 }
 
 
 /* Changing sizes for phone users (Landscape View) */
 @media screen and (min-width: 600px) and (max-width: 840px) {
+    
+    /* Changes to Cover Section */
+
+    #cover {
+        height: 100%;
+    }
+
+    #cover h1 {
+        font-size: 4em;
+    }
+    
+    .car-image-1 {
+        height: 100px;
+    }
+    
+    .air {
+        width: 80%;
+    }
+    
+    .car-air-1 {right: 34%;}
+    .car-air-2 {right: 34%;}
+    .car-air-3 {right: 34%;}
+
+    .loading-bar {
+        bottom: 19%;
+    }
+    
+    /* Changes to Navigation */
+
+    #navigation {
+        position: static;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        padding: 5px;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 1em;
+        margin-right: 5px;
+    }
+                
+    .nav-line {
+        height: 2px;
+        width: 90%;
+        background-color: #6e6e6e;
+        margin-bottom: 5px;
+    }
+    
+    .message {
+        font-size: 0.75em;
+        width: 80%;
+        text-align: center;
+    }
+    
+    /* Changes to Introduction Section */
+
+    #intro-section {
+        padding: 20px 10px 10px 20px;
+    }
+    
+    .intro-content-container > h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    .intro-message {
+        font-size: 0.8em;
+        width: 45%;
+    }
+    
+    .intro-message > p {
+        margin-bottom: 10px;
+    }
+    
+    .banner-btn {
+        height: 60px;
+        width: 60px;
+        margin-right: 15px;
+    }
+    
+    .banner-btn h1 {
+        font-size: 0.65em;
+        padding-bottom: 2px;
+    }
+    
+    .banner-btn p {
+        font-size: 0.85em;
+        text-align: center;
+    }
+            
+    .btn-extra h1 {
+        font-size: 1em;
+    }
+        
+    .banner-image {
+        height: 20px;
+    }
+    
+    .banner-image img {
+        width: 60%;
+        left: 40%;
+        bottom: 150px; 
+    }
+        
+    .intro-bonus img:nth-of-type(2) {
+        display: none;
+    }
+
+    .bonus-image {
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .jet1 {
+        width: 40%;
+        margin-right: 0;
+    }
+        
+    .bonus-text h1 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+    
+    .bonus-text p {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
+    
+    .bonus-text small {
+        font-size: 0.6em;
+    }
+    
+    .intro-review {
+        margin-top: 20px;
+    }
+    
+    .media1 {
+        font-size: 0.7em;
+        margin-right: 10px;
+    }
+    
+    .media2 {
+        font-size: 0.5em;
+    }
+    
+    .media3 {
+        font-size: 0.55em;
+        margin-left: 10px;
+    }
+    
+    .quote {
+        font-size: 0.6em;
+        margin-top: 10px;
+    }
+    
+    .intro-review img {
+        height: 9px;
+        width: 9px;
+    }
+    
+    .quote button {
+        height: 30px;
+        width: 80px;
+        margin-top: 50px;
+    }
+    
+    /* Changes to Product Section */
+
+    #product-section {
+        padding: 100px 10px 0 10px;
+    }
+    
+    #product-section > h1 {
+        font-size: 3.5em;
+        margin-bottom: 50px;
+    }
+    
+    .car-container {
+        height: auto;
+        margin-bottom: 100px;
+    }
+    
+    .car-container > h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .car-info {
+        width: 50%;
+        margin-right: 20px;
+    }
+
+    .car-image {
+        width: 45%;
+    }
+
+    .car-info p {
+        font-size: 0.8em;
+        width: 100%;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .car-info button {
+        font-size: 0.8em;
+        height: 80px;
+        width: 80px;
+    }
+
+    /* Changes to Footer Section */
+
+    
+    footer {
+        padding: 50px 0 100px 0;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-line {
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px;
+    }
+
+    .footer-links a {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .other-links {
+        font-size: 0.8em;
+        width: 70%;
+    }
+
+    .other-links small {
+        margin-right: 15px;
+    }
+
+    .other-links small span {
+        font-size: 0.8em;
+    }
+
+    .footer-images {
+        margin-top: 50px;
+        margin: 50px auto 0 auto;
+        padding-right: 30%;
+    }
+
+    /* Changes to Button Animations */
+
+    @keyframes btnHover {
+        to {
+        }
+    }
+
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+
+    button {
+        outline: none;
+        animation: btnHoverOff 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    button:hover {
+        animation: btnHover 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #intro-section button:active img {
+        content: url("../images/down-arrow.png");
+    }
+
+
+    /* Changes to Navigation Bar Link Animations */
+
+    @keyframes linkHover {
+        from {
+        }
+        to {
+        }
+    }
+
+    #navigation h1:hover {
+        animation: linkHover 0.5s;
+        -webkit-animation-fill-mode: forwards;
+    }
+}
+
+
+/* Changing sizes for Laptop and Desktop Users */
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+
+    /* Changes to Cover Section */
+
+    #cover {
+        height: 100%;
+    }
+
+    #cover h1 {
+        font-size: 8em;
+    }
+    
+    .car-image-1 {
+        height: 200px;
+    }
+    
+    .air {
+        width: 80%;
+    }
+    
+    .car-air-1 {right: 25%;}
+    .car-air-2 {right: 25%;}
+    .car-air-3 {right: 25%;}
+
+    .loading-bar {
+        bottom: 19%;
+    }
+    
+    /* Changes to Navigation */
+
+    #navigation {
+        position: fixed;
+        width: 90%;
+        margin: 20px auto 0 auto;
+        padding: 5px;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 1em;
+        margin-right: 30px;
+    }
+                
+    .nav-line {
+        height: 2px;
+        width: 90%;
+        background-color: #6e6e6e;
+        margin-bottom: 5px;
+    }
+    
+    .message {
+        font-size: 0.8em;
+        width: 80%;
+        text-align: center;
+    }
+    
+    /* Changes to Introduction Section */
+
+    #intro-section {
+        padding: 150px 15% 10px 15%;
+    }
+    
+    .intro-content-container > h1 {
+        font-size: 4.5em;
+        margin-bottom: 20px;
+    }
+    
+    .intro-message {
+        font-size: 1em;
+        width: 50%;
+    }
+    
+    .intro-message > p {
+        margin-bottom: 30px;
+    }
+    
+    .banner-btn {
+        height: 150px;
+        width: 150px;
+        margin-right: 30px;
+    }
+    
+    .banner-btn h1 {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+    
+    .banner-btn p {
+        font-size: 1.3em;
+        text-align: center;
+    }
+            
+    .btn-extra h1 {
+        font-size: 1.5em;
+    }
+        
+    .banner-image {
+        height: 200px;
+    }
+    
+    .banner-image img {
+        width: 76%;
+        left: 28%;
+        bottom: 260px; 
+    }
+        
+    .intro-bonus img:nth-of-type(2) {
+        display: static;
+    }
+
+    .bonus-image {
+        justify-content: center;
+        padding: 15px;
+    }
+    
+    .jet1 {
+        width: 40%;
+        margin-right: 20px;
+    }
+
+    .jet2 {
+        width: 40%;
+    }
+        
+    .bonus-text h1 {
+        font-size: 4.5em;
+        margin-bottom: 30px;
+    }
+    
+    .bonus-text p {
+        font-size: 1em;
+        width: 70%;
+        margin-bottom: 30px;
+    }
+    
+    .bonus-text small {
+        font-size: 0.8em;
+    }
+    
+    .intro-review {
+        margin-top: 100px;
+    }
+    
+    .media1 {
+        font-size: 2.5em;
+    }
+    
+    .media2 {
+        font-size: 1.5em;
+    }
+    
+    .media3 {
+        font-size: 1.5em;
+    }
+    
+    .quote {
+        font-size: 1em;
+        margin-top: 50px;
+    }
+    
+    .intro-review img {
+        height: 25px;
+        width: 25px;
+    }
+    
+    .quote button {
+        height: 30px;
+        width: 80px;
+        margin-top: 50px;
+    }
+    
+    /* Changes to Product Section */
+
+    #product-section {
+        padding: 120px 15% 0 15%;
+    }
+    
+    #product-section > h1 {
+        display: none;
+    }
+    
+    .car-container {
+        height: auto;
+        margin-bottom: 200px;
+    }
+    
+    .car-container > h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    
+    .car-info {
+        width: 50%;
+        margin-right: 50px;
+    }
+
+    .car-image {
+        width: 45%;
+    }
+
+    .car-info p {
+        font-size: 1em;
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        margin-bottom: 10px;
+    }
+
+    .car-info button {
+        font-size: 1em;
+        height: 100px;
+        width: 100px;
+        margin-right: 50px;
+    }
+
+    /* Changes to Footer Section */
+
+    
+    footer {
+        padding: 50px 0 100px 0;
+        width: 80%;
+    }
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-line {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-links a {
+        font-size: 1em;
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    .other-links {
+        font-size: 1em;
+        width: 40%;
+    }
+
+    .other-links small {
+        margin-right: 15px;
+    }
+
+    .other-links small span {
+        font-size: 1em;
+    }
+
+    .footer-images {
+        margin-top: 50px;
+        margin: 50px auto 0 auto;
+        padding-right: 0%;
+    }
+
+
+    /* Button Animations */
+
+    @keyframes btnHover {
+        from {
+            color: #f5f5f5;
+            background-color: #282828;
+            box-shadow: none;
+        }
+        to {
+            color: #282828;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 5px #282828;
+        }
+    }
+
+    @keyframes btnHoverOff {
+        from {
+            color: #282828;
+            background-color: #f5f5f5;
+            box-shadow: 5px 5px 5px #282828;
+        }
+        to {
+            color: #f5f5f5;
+            background-color: #282828;
+            box-shadow: none;
+        }
+    }
+
+    button {
+        outline: none;
+        animation: btnHoverOff 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    button:hover {
+        animation: btnHover 0.5s 1;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #intro-section button:hover img {
+        content: url("../images/down-arrow2.png");
+    }
+
+
+    /*Navigation Bar Link Animations */
+
+    @keyframes linkHover {
+        from {
+        }
+        to {
+            color: #282828;
+            font-weight: bold;
+            border: 2px solid #282828;
+        }
+    }
+
+    #navigation h1:hover {
+        animation: linkHover 0.5s;
+        -webkit-animation-fill-mode: forwards;
+    }
+
 }

@@ -2,6 +2,7 @@
 
 const nav = document.getElementById("navigation");
 const mark = document.getElementsByClassName("intro-review");
+const mark2 = document.getElementsByClassName("mark2");
 
 navScroll(mark);
 
