@@ -7,25 +7,28 @@ navScroll(mark);
 
 function navScroll (element) {
     var windowHeight = window.innerHeight;
-    window.addEventListener("scroll", () => {
-        for (var x = 0; x < element.length; x++) {
-            var elem = element[x];
-            var position = element[x].getBoundingClientRect().top;
-            if (position - windowHeight <= 0) {
-                nav.style.transition = "all 0.5s";
-                nav.style.backgroundColor = "#f5f5f5";
-                nav.style.border = "5px solid #282828";
-            } else if (position - windowHeight > 0) {
-                nav.style.transition = "all 0.5s";
-                nav.style.backgroundColor = "transparent";
-                nav.style.borderColor = "transparent";
+    var windowWidth = window.innerWidth;
+    if (windowWidth > 840) {
+        window.addEventListener("scroll", () => {
+            for (var x = 0; x < element.length; x++) {
+                var elem = element[x];
+                var position = element[x].getBoundingClientRect().top;
+                if (position - windowHeight <= 0) {
+                    nav.style.transition = "all 0.5s";
+                    nav.style.backgroundColor = "#f5f5f5";
+                    nav.style.border = "5px solid #282828";
+                } else if (position - windowHeight > 0) {
+                    nav.style.transition = "all 0.5s";
+                    nav.style.backgroundColor = "transparent";
+                    nav.style.borderColor = "transparent";
+                }
             }
-        }
-    })
+        })
+    }
 }
 
 
-/* ON PAGE SECTION LINK ANIMATION */
+/* LINK Section ANIMATION */
 
 document.getElementsByClassName("product-link")[0].addEventListener("click", productScroll);
 document.getElementsByClassName("intro-button")[0].addEventListener("click", productScroll);
