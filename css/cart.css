@@ -125,7 +125,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    justify-self: ;
 }
 
 .checkout > h1 {
@@ -219,7 +218,7 @@ body {
 
 .cart-product {
     width: 100%;
-    height: 25%;
+    height: auto;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -328,4 +327,425 @@ button:hover {
 #navigation h1:hover {
     animation: linkHover 0.5s;
     -webkit-animation-fill-mode: forwards;
+}
+
+/* Changing Sizes for Phone Users (Portrait View) */
+@media screen and (min-width: 250px) and (max-width: 500px) {
+
+    /* Changes to Custom Scrollbar */
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        padding: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #282828;
+        border-radius: 6px;
+        border: #282828 1px solid;
+    }
+
+
+    /* Changes to Navigation */
+
+    #navigation {
+        width: 90%;
+        position: static;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 0.8em;
+        margin-right: 15px;
+    }
+
+    #navigation a {
+        text-decoration: none;
+    }
+
+    .nav-line {
+        height: 2px;
+        width: 95%;
+        background-color: #6e6e6e;
+        margin-bottom: 10px;
+    }
+
+    .message {
+        color: #6e6e6e;
+        width: 80%;
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    /* Changes to Cart and Checkout Section */
+
+    #cart-and-checkout-section {
+        padding: 0% 10px 10px 10px;
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart {
+        width: 100%;
+    }
+    
+    .checkout {
+        height: auto;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .checkout > h1 {
+        font-size: 1em;
+        margin: 10px 0 10px 0;
+    }
+
+    .checkout div:nth-of-type(1) {
+        font-size: 0.6em;
+    }
+
+    .checkout div:nth-of-type(2) {
+        font-size: 0.7em;
+    }
+
+    .checkout div:nth-of-type(3) {
+        font-size: 0.7em;
+    }
+
+    .checkout div:nth-of-type(4) {
+        font-size: 0.8em;
+    }
+
+    .checkout div:nth-of-type(5) {
+        padding-top: 10px;
+    }
+
+    .checkout button {
+        font-size: 1em;
+    }
+
+    .total-price p {
+        font-size: 1.2em;
+    }
+
+    .cart-message {
+        font-size: 0.7em;
+        margin-bottom: 5px;
+    }
+
+    .product-num {
+        font-size: 0.5em;
+        margin-bottom: 10px;
+    }
+
+    .products-container {
+        height: 80%;
+        padding-right: 5px;
+    }
+
+    .cart-product {
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #282828;
+    }
+
+    .product-image {
+        width: 80%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .product-info {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-info button {
+        font-size: 0.8em;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+    .product-info p {
+        width: auto;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .product-info h1 {
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .product-price {
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+
+    /* Changes to Button Animations */
+
+    @keyframes btnHover {
+        to {
+        }
+    }
+
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+
+    /* Navigation Bar Link Animations */
+
+    @keyframes linkHover {
+        to {
+        }
+    }
+}
+
+
+/* Changing sizes for phone users (Landscape View) */
+@media screen and (min-width: 501px) and (max-width: 840px) {
+
+    /* Changes to Custom Scrollbar */
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        padding: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #282828;
+        border-radius: 6px;
+        border: #282828 1px solid;
+    }
+
+
+    /* Changes to Navigation */
+
+    #navigation {
+        margin-top: 0;
+        width: 90%;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 1em;
+    }
+            
+    .message {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    /* Changes to Cart and Checkout Section */
+
+    #cart-and-checkout-section {
+        padding: 13% 10px 10px 10px;
+    }
+
+    .section-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart {
+        width: 100%;
+    }
+    
+    .checkout {
+        height: auto;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .checkout > h1 {
+        font-size: 1em;
+        margin: 10px 0 10px 0;
+    }
+
+    .checkout div:nth-of-type(1) {
+        font-size: 0.6em;
+    }
+
+    .checkout div:nth-of-type(2) {
+        font-size: 0.7em;
+    }
+
+    .checkout div:nth-of-type(3) {
+        font-size: 0.7em;
+    }
+
+    .checkout div:nth-of-type(4) {
+        font-size: 0.8em;
+    }
+
+    .checkout div:nth-of-type(5) {
+        padding-top: 10px;
+    }
+
+    .checkout button {
+        font-size: 1em;
+    }
+
+    .total-price p {
+        font-size: 1.2em;
+    }
+
+    .cart-message {
+        display: none;
+    }
+
+    .product-num {
+        display: none;
+    }
+
+    .products-container {
+        height: 100%;
+        padding-right: 10px;
+    }
+
+    .cart-product {
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #282828;
+        margin-bottom: 20px;
+    }
+
+    .product-image {
+        width: 100%;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+
+    .product-info {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-info button {
+        font-size: 0.8em;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .product-info p {
+        width: auto;
+        margin-top: 10px;
+        margin-right: 0px;
+        text-align: center;
+    }
+
+    .product-info h1 {
+        width: auto;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .product-price {
+        font-size: 1em;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        text-decoration: none;
+    }
+
+    /* Changes to Button Animations */
+
+    @keyframes btnHover {
+        to {
+        }
+    }
+
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+
+    /* Navigation Bar Link Animations */
+
+    @keyframes linkHover {
+        to {
+        }
+    }
+}
+
+
+/* Changing sizes for Laptop and Desktop Users */
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+
+    /* Changes to Navigation */
+
+    #navigation {
+        width: 80%;
+    }
+
+    /* Changes to Cart and Checkout Section */
+
+    #cart-and-checkout-section {
+        padding: 18vh 15% 50px 15%;
+    }
+
+    .checkout div:nth-of-type(2) {
+        justify-content: space-between;
+    }
+
+    .checkout button {
+        color: #282828;
+        font-size: 1.5em;
+        font-weight: bolder;
+        width: 100%;
+        background-color: #f5f5f5;
+        padding: 10px;
+        border: 2px solid #f5f5f5;
+    }
+
+    .total-price p{
+        font-size: 0.8em;
+    }
+
+    .cart-message {
+        margin-bottom: 15px;
+    }
+
+    .product-num {
+        margin-bottom: 15px;
+    }
+
+    .cart-product {
+        height: 35%;
+    }
+
+    .product-image {
+        margin-right: 20px;
+        
+    }
+
+    .product-price {
+        font-size: 0.9em;
+    }
 }
