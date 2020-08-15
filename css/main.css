@@ -559,7 +559,6 @@ button:hover {
 
 
 /* Changing Sizes for Phone Users (Portrait View) */
-
 @media screen and (min-width: 330px) and (max-width: 480px) {
     
     /* Changes to Cover Section */
