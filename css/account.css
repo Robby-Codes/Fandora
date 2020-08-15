@@ -106,7 +106,7 @@ body {
 }
 
 .form-container {
-    height: 50%;
+    height: auto;
     width: 50%;
     padding: 20px;
     border: 5px solid #282828;
@@ -140,7 +140,7 @@ label {
 
 input {
     height: 25px;
-    width: 50%;
+    width: 80%;
 }
 
 .form-buttons {
@@ -256,4 +256,297 @@ input[type="submit"]:hover {
 #navigation h1:hover {
     animation: linkHover 0.5s;
     -webkit-animation-fill-mode: forwards;
+}
+
+
+/* Changing Sizes for Phone Users (Portrait View) */
+@media screen and (min-width: 330px) and (max-width: 480px) {
+
+    /* Changes to Navigation */
+
+    #navigation {
+        width: 90%;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 0.8em;
+    }
+    
+    .nav-home {
+        font-weight: bold;
+    }
+        
+    .message {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    
+    /* Changes to Log-In Section */
+    
+    #log-in-section {
+        padding-top: 40%;
+    }
+
+    .form-container {
+        height: auto;
+        width: 90%;
+    }
+    
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form > div {
+        height: 100%;
+        margin-bottom: 10px;
+    }
+    
+    label {
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    input {
+        height: 25px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .form-buttons input, .form-buttons button {
+        font-size: 0.8em;
+    }
+    
+    .form-buttons input {
+        margin-top: 0px;
+    }
+        
+    .form-buttons > div {
+        margin-bottom: 10px;
+    }
+    
+    .form-container > div h1 {
+        font-size: 1em;
+    }
+    
+    /* Button Animations */
+    
+    @keyframes btnHover {
+        to {
+        }
+    }
+    
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+        
+    /* Navigation Bar Link Animations */
+    
+    @keyframes linkHover {
+        to {
+        }
+    }    
+}
+
+
+/* Changing sizes for phone users (Landscape View) */
+@media screen and (min-width: 600px) and (max-width: 840px) {
+    
+    /* Changes to Navigation */
+
+    #navigation {
+        margin-top: 0;
+        width: 90%;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 1em;
+    }
+            
+    .message {
+        font-size: 0.8em;
+        text-align: center;
+    }
+    
+    /* Changes to Log-In Section */
+    
+    #log-in-section {
+        padding-top: 15%;
+    }
+
+    .form-container {
+        height: auto;
+        width: 70%;
+    }
+    
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form > div {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    label {
+        font-size: 1em;
+        width: 25%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+    
+    input {
+        height: 20px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .form-buttons input, .form-buttons button {
+        height: 30px;
+        width: 80px;
+        font-size: 0.8em;
+    }
+    
+    .form-buttons input {
+        margin-top: 0px;
+    }
+        
+    .form-buttons > div {
+        margin-bottom: 5px;
+    }
+    
+    .form-container > div h1 {
+        font-size: 0.8em;
+        margin-bottom: 5px;
+    }
+
+    #log-in-section button {
+        height: 30px;
+        width: 80px;
+        font-size: 0.8em;
+    }
+    
+    /* Button Animations */
+    
+    @keyframes btnHover {
+        to {
+        }
+    }
+    
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+        
+    /* Navigation Bar Link Animations */
+    
+    @keyframes linkHover {
+        to {
+        }
+    }    
+}
+
+/* Changing sizes for Laptop and Desktop Users */
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+        /* Changes to Navigation */
+
+    #navigation {
+        width: 80%;
+    }
+
+    .nav-buttons, .nav-home {
+        font-size: 1em;
+    }
+    
+    .nav-home {
+        font-weight: bold;
+    }
+        
+    .message {
+        font-size: 1em;
+        text-align: center;
+    }
+    
+    /* Changes to Log-In Section */
+    
+    #log-in-section {
+        padding-top: 0%;
+    }
+
+    .form-container {
+        height: auto;
+        width: 30%;
+    }
+    
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form > div {
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-size: 2em;
+        width: 100%;
+        text-align: start;
+        margin-bottom: 10px;
+    }
+    
+    input {
+        height: 25px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .form-buttons input, .form-buttons button {
+        font-size: 1em;
+    }
+    
+    .form-buttons input {
+        margin-top: 0px;
+    }
+        
+    .form-buttons > div {
+        margin-bottom: 10px;
+    }
+    
+    .form-container > div h1 {
+        font-size: 1em;
+    }
+    
+    /* Button Animations */
+    
+    @keyframes btnHover {
+        to {
+        }
+    }
+    
+    @keyframes btnHoverOff {
+        to {
+        }
+    }
+        
+    /* Navigation Bar Link Animations */
+    
+    @keyframes linkHover {
+        to {
+        }
+    }   
 }
