@@ -221,8 +221,8 @@ body {
 
 .banner-btn {
     color: #f5f5f5;
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     background-color: #282828;
     margin-right: 20px;
     display: flex;
@@ -234,12 +234,12 @@ body {
 }
 
 .banner-btn h1 {
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding-bottom: 10px;
 }
 
 .banner-btn p {
-    font-size: 1.2em;
+    font-size: 0.9em;
 }
 
 .intro-message > div {
@@ -253,10 +253,12 @@ body {
 
 .btn-extra h1 {
     color: #282828;
+    font-size: 1em;
 }
 
 .btn-extra p {
     color: #6e6e6e;
+    font-size: 0.8em;
 }
 
 .banner-image {
@@ -266,7 +268,7 @@ body {
 .banner-image img {
     width: 85%;
     position: relative;
-    left: 29%;
+    left: 33%;
     bottom: 180px; 
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -599,20 +601,20 @@ button:hover {
     }
 
     .nav-buttons, .nav-home {
-        font-size: 0.7em;
-        margin-right: 5px;
+        font-size: 0.6em;
+        margin-right: 0px;
     }
                 
     .nav-line {
         height: 2px;
-        width: 90%;
+        width: 100%;
         background-color: #6e6e6e;
         margin-bottom: 5px;
     }
     
     .message {
         font-size: 0.7em;
-        width: 80%;
+        width: 90%;
         text-align: center;
     }
     
@@ -633,6 +635,7 @@ button:hover {
     }
     
     .intro-message > p {
+        width: 90%;
         margin-bottom: 10px;
     }
     
@@ -662,7 +665,7 @@ button:hover {
     
     .banner-image img {
         width: 70%;
-        left: 35%;
+        left: 42%;
         bottom: 130px; 
     }
         
@@ -731,7 +734,7 @@ button:hover {
     /* Changes to Product Section */
 
     #product-section {
-        padding: 100px 20px 0 20px;
+        padding: 100px 20px 0 50px;
     }
     
     #product-section > h1 {
@@ -821,6 +824,7 @@ button:hover {
     }
 
     .other-links small {
+        margin-left: 10px;
         margin-right: 15px;
     }
 
@@ -937,7 +941,7 @@ button:hover {
     /* Changes to Introduction Section */
 
     #intro-section {
-        padding: 20px 10px 10px 20px;
+        padding: 20px 10px 10px 30px;
     }
     
     .intro-content-container > h1 {
@@ -973,15 +977,15 @@ button:hover {
     .btn-extra h1 {
         font-size: 1em;
     }
-        
+
     .banner-image {
-        height: 20px;
+        height: 50px;
     }
     
     .banner-image img {
         width: 60%;
-        left: 40%;
-        bottom: 150px; 
+        left: 42%;
+        bottom: 160px; 
     }
         
     .intro-bonus img:nth-of-type(2) {
@@ -1006,6 +1010,7 @@ button:hover {
     .bonus-text p {
         font-size: 0.8em;
         margin-bottom: 5px;
+        width: 95%;
     }
     
     .bonus-text small {
@@ -1049,7 +1054,7 @@ button:hover {
     /* Changes to Product Section */
 
     #product-section {
-        padding: 100px 10px 0 10px;
+        padding: 100px 25px 0 50px;
     }
     
     #product-section > h1 {
@@ -1098,7 +1103,6 @@ button:hover {
 
     /* Changes to Footer Section */
 
-    
     footer {
         padding: 50px 0 100px 0;
     }
@@ -1118,10 +1122,11 @@ button:hover {
         display: flex;
         flex-direction: row;
         margin-bottom: 30px;
+        margin-left: 20px;
     }
 
     .footer-links a {
-        font-size: 0.8em;
+        font-size: 0.7em;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -1267,32 +1272,33 @@ button:hover {
     }
     
     .banner-btn {
-        height: 150px;
-        width: 150px;
-        margin-right: 30px;
+        height: 120px;
+        width: 120px;
+        margin-right: 20px;
     }
     
     .banner-btn h1 {
-        font-size: 1.5em;
+        font-size: 1em;
         padding-bottom: 10px;
     }
     
     .banner-btn p {
-        font-size: 1.3em;
+        font-size: 1em;
         text-align: center;
     }
             
     .btn-extra h1 {
-        font-size: 1.5em;
+        font-size: 1em;
+
     }
-        
+    
     .banner-image {
         height: 200px;
     }
     
     .banner-image img {
         width: 76%;
-        left: 28%;
+        left: 33%;
         bottom: 260px; 
     }
         
