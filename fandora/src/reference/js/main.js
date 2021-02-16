@@ -6,38 +6,42 @@ const mark2 = document.getElementsByClassName("mark2");
 
 navScroll(mark);
 
-function navScroll (element) {
-    var windowHeight = window.innerHeight;
-    var windowWidth = window.innerWidth;
-    if (windowWidth > 840) {
-        window.addEventListener("scroll", () => {
-            for (var x = 0; x < element.length; x++) {
-                var elem = element[x];
-                var position = element[x].getBoundingClientRect().top;
-                if (position - windowHeight <= 0) {
-                    nav.style.transition = "all 0.5s";
-                    nav.style.backgroundColor = "#f5f5f5";
-                    nav.style.border = "5px solid #282828";
-                } else if (position - windowHeight > 0) {
-                    nav.style.transition = "all 0.5s";
-                    nav.style.backgroundColor = "transparent";
-                    nav.style.borderColor = "transparent";
-                }
-            }
-        })
-    }
+function navScroll(element) {
+  var windowHeight = window.innerHeight;
+  var windowWidth = window.innerWidth;
+  if (windowWidth > 840) {
+    window.addEventListener("scroll", () => {
+      for (var x = 0; x < element.length; x++) {
+        var elem = element[x];
+        var position = element[x].getBoundingClientRect().top;
+        if (position - windowHeight <= 0) {
+          nav.style.transition = "all 0.5s";
+          nav.style.backgroundColor = "#f5f5f5";
+          nav.style.border = "5px solid #282828";
+        } else if (position - windowHeight > 0) {
+          nav.style.transition = "all 0.5s";
+          nav.style.backgroundColor = "transparent";
+          nav.style.borderColor = "transparent";
+        }
+      }
+    });
+  }
 }
-
 
 /* LINK Section ANIMATION */
 
-document.getElementsByClassName("product-link")[0].addEventListener("click", productScroll);
-document.getElementsByClassName("intro-button")[0].addEventListener("click", productScroll);
+document
+  .getElementsByClassName("product-link")[0]
+  .addEventListener("click", productScroll);
+document
+  .getElementsByClassName("intro-button")[0]
+  .addEventListener("click", productScroll);
 
-function productScroll () {
-    document.getElementById("product-section").scrollIntoView({behavior: 'smooth'});
+function productScroll() {
+  document
+    .getElementById("product-section")
+    .scrollIntoView({ behavior: "smooth" });
 }
-
 
 /* CAR IMAGE ANIMATION ON SCROLL */
 
@@ -52,36 +56,35 @@ const carPic8 = document.getElementsByClassName("p8");
 const carPic9 = document.getElementsByClassName("p9");
 const carPic10 = document.getElementsByClassName("p10");
 
-carScroll (carPic1);
-carScroll (carPic2);
-carScroll (carPic3);
-carScroll (carPic4);
-carScroll (carPic5);
-carScroll (carPic6);
-carScroll (carPic7);
-carScroll (carPic8);
-carScroll (carPic9);
-carScroll (carPic10);
+carScroll(carPic1);
+carScroll(carPic2);
+carScroll(carPic3);
+carScroll(carPic4);
+carScroll(carPic5);
+carScroll(carPic6);
+carScroll(carPic7);
+carScroll(carPic8);
+carScroll(carPic9);
+carScroll(carPic10);
 
-function carScroll (element) {
-    var windowHeight = window.innerHeight;
-    window.addEventListener("scroll", () => {
-        for (var x = 0; x < element.length; x++) {
-            var elem = element[x];
-            var position = element[x].getBoundingClientRect().top;
-            if (position - windowHeight <= 0) {
-                elem.style.transition = "all 2s";
-                elem.style.transform = "translate(0px)";
-                elem.style.opacity = "1";
-            } else if (position - windowHeight > 0) {
-                elem.style.transition = "all 0.5s";
-                elem.style.transform = "translate(50px)";
-                elem.style.opacity = "0";
-            }
-        }
-    })
+function carScroll(element) {
+  var windowHeight = window.innerHeight;
+  window.addEventListener("scroll", () => {
+    for (var x = 0; x < element.length; x++) {
+      var elem = element[x];
+      var position = element[x].getBoundingClientRect().top;
+      if (position - windowHeight <= 0) {
+        elem.style.transition = "all 2s";
+        elem.style.transform = "translate(0px)";
+        elem.style.opacity = "1";
+      } else if (position - windowHeight > 0) {
+        elem.style.transition = "all 0.5s";
+        elem.style.transform = "translate(50px)";
+        elem.style.opacity = "0";
+      }
+    }
+  });
 }
-
 
 /* Updating Cart Number Shown In Navigation Bar */
 
@@ -97,40 +100,39 @@ cartBrain(document.getElementsByClassName("ford-thunderbird-cart")[0]);
 cartBrain(document.getElementsByClassName("mclaren-f1-cart")[0]);
 cartBrain(document.getElementsByClassName("peogeot-onyx-cart")[0]);
 
-function cartBrain (element) {
-    if (element.innerHTML === "Add to Cart") {
-        element.onclick = function () {
-            addToCart(element);
-            updateCarsInCart(element, "add");
-        };
-    } else if (element.innerHTML === "Remove") {
-        element.onclick = function () {
-            subFromCart(element);
-            updateCarsInCart(element, "remove");
-        };
-    }
+function cartBrain(element) {
+  if (element.innerHTML === "Add to Cart") {
+    element.onclick = function () {
+      addToCart(element);
+      updateCarsInCart(element, "add");
+    };
+  } else if (element.innerHTML === "Remove") {
+    element.onclick = function () {
+      subFromCart(element);
+      updateCarsInCart(element, "remove");
+    };
+  }
 }
 
 function addToCart(element) {
-    element.innerHTML = "Remove";
-    let current = parseInt(cartAmount.innerHTML);    
-    current += 1;
-    cartAmount.innerHTML = current.toString();
-    cartAmount.style.color = "green";
-    cartBrain(element);
+  element.innerHTML = "Remove";
+  let current = parseInt(cartAmount.innerHTML);
+  current += 1;
+  cartAmount.innerHTML = current.toString();
+  cartAmount.style.color = "green";
+  cartBrain(element);
 }
 
 function subFromCart(element) {
-    element.innerHTML = "Add to Cart";
-    let current = parseInt(cartAmount.innerHTML);    
-    current -= 1;
-    cartAmount.innerHTML = current.toString();
-    if (cartAmount.innerHTML === "0") {
-        cartAmount.style.color = "red";
-    }
-    cartBrain(element);
+  element.innerHTML = "Add to Cart";
+  let current = parseInt(cartAmount.innerHTML);
+  current -= 1;
+  cartAmount.innerHTML = current.toString();
+  if (cartAmount.innerHTML === "0") {
+    cartAmount.style.color = "red";
+  }
+  cartBrain(element);
 }
-
 
 /* Cover Page Car/Loading Animations */
 
@@ -154,12 +156,12 @@ const bodyOverflow = document.getElementsByTagName("body")[0];
 onload = loadingFunction;
 
 function loadingFunction() {
-    loadingBar.style.transition = "all 4s";
-    loadingBar.style.width = "100%";
-    coverPage.style.transition = "all 1s 5s";
-    coverPage.style.opacity = "0";
-    setTimeout(function () {
-        coverPage.style.display = "none";
-        bodyOverflow.style.overflowY = "auto";
-    }, 5500);
+  loadingBar.style.transition = "all 4s";
+  loadingBar.style.width = "100%";
+  coverPage.style.transition = "all 1s 5s";
+  coverPage.style.opacity = "0";
+  setTimeout(function () {
+    coverPage.style.display = "none";
+    bodyOverflow.style.overflowY = "auto";
+  }, 5500);
 }

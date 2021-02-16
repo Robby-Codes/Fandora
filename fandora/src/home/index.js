@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./homeanimations";
 import mcar from "../assets/im1.png";
 import jet from "../assets/jet1.png";
 import star from "../assets/star.png";
@@ -20,6 +21,7 @@ import "./home.css";
 const Home = () => {
   return (
     <>
+      <NavBar />
       <IntroSection />
       <ProductSection />
       <Footer />
@@ -27,7 +29,45 @@ const Home = () => {
   );
 };
 
+const NavBar = () => {
+  const productClick = () => {
+    document
+      .getElementById("product-section")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <nav id="navigation">
+      <div className="nav-btn-container">
+        <Link to="/">
+          <h1 className="nav-home">FANDORA</h1>
+        </Link>
+        <Link to="/" className="product-link" onClick={() => productClick()}>
+          <h1 className="nav-buttons">PRODUCTS</h1>
+        </Link>
+        <Link to="/">
+          <h1 className="nav-buttons">ACCOUNT</h1>
+        </Link>
+        <Link to="/">
+          <h1 className="nav-buttons">
+            CART<sub>0</sub>
+          </h1>
+        </Link>
+      </div>
+      <div className="nav-line"></div>
+      <div className="message">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae libero
+        tempore.
+      </div>
+    </nav>
+  );
+};
+
 const IntroSection = () => {
+  const introButtonClick = () => {
+    document
+      .getElementById("product-section")
+      .scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <section id="intro-section">
@@ -96,7 +136,10 @@ const IntroSection = () => {
               <h1>
                 <em>"This is an awesome quote!"</em>
               </h1>
-              <button className="intro-button">
+              <button
+                className="intro-button"
+                onClick={() => introButtonClick()}
+              >
                 <img src={down_arrow} />
               </button>
             </div>
@@ -198,9 +241,9 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div class="footer-container">
-          <div class="footer-line"></div>
-          <div class="footer-links">
+        <div className="footer-container">
+          <div className="footer-line"></div>
+          <div className="footer-links">
             <Link>Fandora</Link>
             <Link>News</Link>
             <Link>Support</Link>
@@ -209,7 +252,7 @@ const Footer = () => {
             <Link>Media</Link>
             <Link>contact</Link>
           </div>
-          <div class="other-links">
+          <div className="other-links">
             <small>
               <span>Site Created By: Roberto Guerra</span>
             </small>
@@ -223,7 +266,7 @@ const Footer = () => {
               <Link>Amet</Link>
             </small>
           </div>
-          <div class="footer-images">
+          <div className="footer-images">
             <img src={mc} />
             <img src={visa} />
           </div>

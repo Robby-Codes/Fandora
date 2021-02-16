@@ -35,6 +35,69 @@ body {
   border: #282828 1px solid;
 }
 
+/* Navigation */
+
+#navigation {
+  width: 60%;
+  padding: 10px 0 10px 0;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  margin-top: 30px;
+  margin-right: 20%;
+  margin-left: 20%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
+}
+
+.nav-btn-container {
+  display: flex;
+}
+
+.nav-buttons,
+.nav-home {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #6e6e6e;
+  margin-right: 25px;
+}
+
+.nav-home {
+  font-weight: bold;
+}
+
+#navigation h1 {
+  height: 30px;
+  padding: 3px 8px 2px 8px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  background-color: transparent;
+  margin-bottom: 5px;
+}
+
+#navigation a {
+  text-decoration: none;
+}
+
+.nav-buttons sub {
+  color: red;
+}
+
+.nav-line {
+  height: 2px;
+  width: 90%;
+  background-color: #6e6e6e;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: #6e6e6e;
+  font-size: 0.9em;
+}
+
 /* Introduction Section */
 
 #intro-section {
