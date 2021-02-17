@@ -17,16 +17,16 @@ import mc from "../assets/mc.png";
 import visa from "../assets/visa.png";
 import "./home.css";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
-      <NavBar />
+      <NavBar1 />
       <Footer />
     </>
   );
 };
 
-const NavBar = () => {
+const NavBar1 = () => {
   const [cart, setCart] = useState(0);
   const productClick = () => {
     document
@@ -43,7 +43,7 @@ const NavBar = () => {
           <Link to="/" className="product-link" onClick={() => productClick()}>
             <h1 className="nav-buttons">PRODUCTS</h1>
           </Link>
-          <Link to="/">
+          <Link to="/account">
             <h1 className="nav-buttons">ACCOUNT</h1>
           </Link>
           <Link to="/">
@@ -338,4 +338,4 @@ const Footer = () => {
   );
 };
 
-export default Home;
+export default HomePage;

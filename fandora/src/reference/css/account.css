@@ -1,534 +1,536 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 ::selection {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
 
 /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
-    width: 8px;
-    padding: 2.5px;
- }
+  width: 8px;
+  padding: 2.5px;
+}
 
 ::-webkit-scrollbar-track {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-     background: #282828;
-     border-radius: 6px;
-     border: #282828 1px solid;
- }
+  background: #282828;
+  border-radius: 6px;
+  border: #282828 1px solid;
+}
 
 /* Navigation */
 
 #navigation {
-    width: 60%;
-    padding: 10px 0 10px 0;
-    border: 5px solid transparent;
-    border-radius: 50px;
-    margin-top: 30px;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 99;
+  width: 60%;
+  padding: 10px 0 10px 0;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  margin-top: 30px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
 }
 
 .nav-btn-container {
-    display: flex;
+  display: flex;
 }
 
-.nav-buttons, .nav-home {
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: normal;
-    color: #6e6e6e;
-    margin-right: 25px;
+.nav-buttons,
+.nav-home {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #6e6e6e;
+  margin-right: 25px;
 }
 
 .nav-home {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #navigation h1 {
-    height: 30px;
-    padding: 3px 8px 2px 8px;
-    border: 2px solid transparent;
-    border-radius: 100px;
-    background-color: transparent;
-    margin-bottom: 5px;
+  height: 30px;
+  padding: 3px 8px 2px 8px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  background-color: transparent;
+  margin-bottom: 5px;
 }
 
 #navigation a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-buttons sub {
-    color: red;
+  color: red;
 }
 
 .nav-line {
-    height: 2px;
-    width: 90%;
-    background-color: #6e6e6e;
-    margin-bottom: 10px;
+  height: 2px;
+  width: 90%;
+  background-color: #6e6e6e;
+  margin-bottom: 10px;
 }
 
 .message {
-    color: #6e6e6e;
-    font-size: 0.9em;
+  color: #6e6e6e;
+  font-size: 0.9em;
 }
 
 /* Log In Section */
 
 #log-in-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-container {
-    height: auto;
-    width: 50%;
-    padding: 20px;
-    border: 5px solid #282828;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px #282828;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: auto;
+  width: 50%;
+  padding: 20px;
+  border: 5px solid #282828;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form > div {
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 label {
-    font-size: 2em;
-    width: 35%;
-    margin-bottom: 20px;
+  font-size: 2em;
+  width: 35%;
+  margin-bottom: 20px;
 }
 
 input {
-    height: 25px;
-    width: 80%;
+  height: 25px;
+  width: 80%;
 }
 
 .form-buttons {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.form-buttons input, .form-buttons button {
-    color: #f5f5f5;
-    font-size: 1em;
-    height: 50px;
-    width: 120px;
-    background-color: #282828;
-    border: 2px solid #282828;
-
+.form-buttons input,
+.form-buttons button {
+  color: #f5f5f5;
+  font-size: 1em;
+  height: 50px;
+  width: 120px;
+  background-color: #282828;
+  border: 2px solid #282828;
 }
 
 .form-buttons input {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .form-buttons > div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-buttons > div {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .form-container > div button {
-    color: #f5f5f5;
-    width: 100px;
-    height: 30px;
-    border: 2px solid #282828;
-    background-color: #282828;
-    margin-top: 10px;
+  color: #f5f5f5;
+  width: 100px;
+  height: 30px;
+  border: 2px solid #282828;
+  background-color: #282828;
+  margin-top: 10px;
 }
 
 .form-container > div h1 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 /* Button Animations */
 
 @keyframes btnHover {
-    from {
-        color: #f5f5f5;
-        background-color: #282828;
-        box-shadow: none;
-    }
-    to {
-        color: #282828;
-        background-color: #f5f5f5;
-        box-shadow: 5px 5px 5px #282828;
-    }
+  from {
+    color: #f5f5f5;
+    background-color: #282828;
+    box-shadow: none;
+  }
+  to {
+    color: #282828;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 5px #282828;
+  }
 }
 
 @keyframes btnHoverOff {
-    from {
-        color: #282828;
-        background-color: #f5f5f5;
-        box-shadow: 5px 5px 5px #282828;
-    }
-    to {
-        color: #f5f5f5;
-        background-color: #282828;
-        box-shadow: none;
-    }
+  from {
+    color: #282828;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 5px #282828;
+  }
+  to {
+    color: #f5f5f5;
+    background-color: #282828;
+    box-shadow: none;
+  }
 }
 
 button {
-    cursor: pointer;
-    outline: none;
-    animation: btnHoverOff 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  cursor: pointer;
+  outline: none;
+  animation: btnHoverOff 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 button:hover {
-    animation: btnHover 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  animation: btnHover 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 input[type="submit"] {
-    cursor: pointer;
-    outline: none;
-    animation: btnHoverOff 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  cursor: pointer;
+  outline: none;
+  animation: btnHoverOff 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 input[type="submit"]:hover {
-    animation: btnHover 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  animation: btnHover 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 /* Navigation Bar Link Animations */
 
 @keyframes linkHover {
-    from {
-    }
-    to {
-        color: #282828;
-        font-weight: bold;
-        border: 2px solid #282828;
-    }
+  from {
+  }
+  to {
+    color: #282828;
+    font-weight: bold;
+    border: 2px solid #282828;
+  }
 }
 
 #navigation h1:hover {
-    animation: linkHover 0.5s;
-    -webkit-animation-fill-mode: forwards;
+  animation: linkHover 0.5s;
+  -webkit-animation-fill-mode: forwards;
 }
-
 
 /* Changing Sizes for Phone Users (Portrait View) */
 @media screen and (min-width: 250px) and (max-width: 500px) {
+  /* Changes to Navigation */
 
-    /* Changes to Navigation */
+  #navigation {
+    width: 90%;
+  }
 
-    #navigation {
-        width: 90%;
-    }
+  .nav-buttons,
+  .nav-home {
+    font-size: 0.8em;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 0.8em;
-    }
-    
-    .nav-home {
-        font-weight: bold;
-    }
-        
-    .message {
-        font-size: 0.8em;
-        text-align: center;
-    }
-    
-    /* Changes to Log-In Section */
-    
-    #log-in-section {
-        padding-top: 40%;
-    }
+  .nav-home {
+    font-weight: bold;
+  }
 
-    .form-container {
-        height: auto;
-        width: 90%;
+  .message {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  /* Changes to Log-In Section */
+
+  #log-in-section {
+    padding-top: 40%;
+  }
+
+  .form-container {
+    height: auto;
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form > div {
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input {
+    height: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-buttons input,
+  .form-buttons button {
+    font-size: 0.8em;
+  }
+
+  .form-buttons input {
+    margin-top: 0px;
+  }
+
+  .form-buttons > div {
+    margin-bottom: 10px;
+  }
+
+  .form-container > div h1 {
+    font-size: 1em;
+  }
+
+  /* Button Animations */
+
+  @keyframes btnHover {
+    to {
     }
-    
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+  }
+
+  @keyframes btnHoverOff {
+    to {
     }
-    
-    form > div {
-        height: 100%;
-        margin-bottom: 10px;
+  }
+
+  /* Navigation Bar Link Animations */
+
+  @keyframes linkHover {
+    to {
     }
-    
-    label {
-        font-size: 1.5em;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    input {
-        height: 25px;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .form-buttons input, .form-buttons button {
-        font-size: 0.8em;
-    }
-    
-    .form-buttons input {
-        margin-top: 0px;
-    }
-        
-    .form-buttons > div {
-        margin-bottom: 10px;
-    }
-    
-    .form-container > div h1 {
-        font-size: 1em;
-    }
-    
-    /* Button Animations */
-    
-    @keyframes btnHover {
-        to {
-        }
-    }
-    
-    @keyframes btnHoverOff {
-        to {
-        }
-    }
-        
-    /* Navigation Bar Link Animations */
-    
-    @keyframes linkHover {
-        to {
-        }
-    }    
+  }
 }
-
 
 /* Changing sizes for phone users (Landscape View) */
 @media screen and (min-width: 501px) and (max-width: 840px) {
-    
-    /* Changes to Navigation */
+  /* Changes to Navigation */
 
-    #navigation {
-        margin-top: 0;
-        width: 90%;
-    }
+  #navigation {
+    margin-top: 0;
+    width: 90%;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 1em;
-    }
-            
-    .message {
-        font-size: 0.8em;
-        text-align: center;
-    }
-    
-    /* Changes to Log-In Section */
-    
-    #log-in-section {
-        padding-top: 15%;
-    }
+  .nav-buttons,
+  .nav-home {
+    font-size: 1em;
+  }
 
-    .form-container {
-        height: auto;
-        width: 70%;
-    }
-    
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    form > div {
-        height: 100%;
-        width: 100%;
-        margin-bottom: 0px;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    label {
-        font-size: 1em;
-        width: 25%;
-        text-align: center;
-        margin-bottom: 10px;
-        margin-right: 10px;
-    }
-    
-    input {
-        height: 20px;
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    
-    .form-buttons input, .form-buttons button {
-        height: 30px;
-        width: 80px;
-        font-size: 0.8em;
-    }
-    
-    .form-buttons input {
-        margin-top: 0px;
-    }
-        
-    .form-buttons > div {
-        margin-bottom: 5px;
-    }
-    
-    .form-container > div h1 {
-        font-size: 0.8em;
-        margin-bottom: 5px;
-    }
+  .message {
+    font-size: 0.8em;
+    text-align: center;
+  }
 
-    #log-in-section button {
-        height: 30px;
-        width: 80px;
-        font-size: 0.8em;
+  /* Changes to Log-In Section */
+
+  #log-in-section {
+    padding-top: 15%;
+  }
+
+  .form-container {
+    height: auto;
+    width: 70%;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form > div {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  label {
+    font-size: 1em;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  input {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .form-buttons input,
+  .form-buttons button {
+    height: 30px;
+    width: 80px;
+    font-size: 0.8em;
+  }
+
+  .form-buttons input {
+    margin-top: 0px;
+  }
+
+  .form-buttons > div {
+    margin-bottom: 5px;
+  }
+
+  .form-container > div h1 {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+
+  #log-in-section button {
+    height: 30px;
+    width: 80px;
+    font-size: 0.8em;
+  }
+
+  /* Button Animations */
+
+  @keyframes btnHover {
+    to {
     }
-    
-    /* Button Animations */
-    
-    @keyframes btnHover {
-        to {
-        }
+  }
+
+  @keyframes btnHoverOff {
+    to {
     }
-    
-    @keyframes btnHoverOff {
-        to {
-        }
+  }
+
+  /* Navigation Bar Link Animations */
+
+  @keyframes linkHover {
+    to {
     }
-        
-    /* Navigation Bar Link Animations */
-    
-    @keyframes linkHover {
-        to {
-        }
-    }    
+  }
 }
 
 /* Changing sizes for Laptop and Desktop Users */
 @media screen and (min-width: 1200px) and (max-width: 2000px) {
+  /* Changes to Navigation */
 
-    /* Changes to Navigation */
+  #navigation {
+    width: 80%;
+  }
 
-    #navigation {
-        width: 80%;
-    }
+  .nav-buttons,
+  .nav-home {
+    font-size: 1em;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 1em;
-    }
-    
-    .nav-home {
-        font-weight: bold;
-    }
-        
-    .message {
-        font-size: 1em;
-        text-align: center;
-    }
-    
-    /* Changes to Log-In Section */
-    
-    #log-in-section {
-        padding-top: 0%;
-    }
+  .nav-home {
+    font-weight: bold;
+  }
 
-    .form-container {
-        height: auto;
-        width: 30%;
-    }
-    
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    form > div {
-        height: 100%;
-        margin-bottom: 20px;
-    }
-    
-    label {
-        font-size: 2em;
-        width: 100%;
-        text-align: start;
-        margin-bottom: 10px;
-    }
-    
-    input {
-        height: 25px;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .form-buttons input, .form-buttons button {
-        font-size: 1em;
-    }
-    
-    .form-buttons input {
-        margin-top: 0px;
-    }
-        
-    .form-buttons > div {
-        margin-bottom: 10px;
-    }
-    
-    .form-container > div h1 {
-        font-size: 1em;
-    }
+  .message {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /* Changes to Log-In Section */
+
+  #log-in-section {
+    padding-top: 0%;
+  }
+
+  .form-container {
+    height: auto;
+    width: 30%;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form > div {
+    height: 100%;
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 2em;
+    width: 100%;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  input {
+    height: 25px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .form-buttons input,
+  .form-buttons button {
+    font-size: 1em;
+  }
+
+  .form-buttons input {
+    margin-top: 0px;
+  }
+
+  .form-buttons > div {
+    margin-bottom: 10px;
+  }
+
+  .form-container > div h1 {
+    font-size: 1em;
+  }
 }
