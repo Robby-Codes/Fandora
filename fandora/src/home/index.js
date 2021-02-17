@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./homeanimations";
 import mcar from "../assets/im1.png";
 import jet from "../assets/jet1.png";
 import star from "../assets/star.png";
-import down_arrow from "../assets/down-arrow.png";
 import ac_shelby_cobra from "../assets/ac-cobra.png";
 import audi_r8 from "../assets/audi-r8.png";
 import audi_r8_spyder from "../assets/audi-r8-spyder.png";
@@ -22,43 +21,46 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <IntroSection />
-      <ProductSection />
       <Footer />
     </>
   );
 };
 
 const NavBar = () => {
+  const [cart, setCart] = useState(0);
   const productClick = () => {
     document
       .getElementById("product-section")
       .scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <nav id="navigation">
-      <div className="nav-btn-container">
-        <Link to="/">
-          <h1 className="nav-home">FANDORA</h1>
-        </Link>
-        <Link to="/" className="product-link" onClick={() => productClick()}>
-          <h1 className="nav-buttons">PRODUCTS</h1>
-        </Link>
-        <Link to="/">
-          <h1 className="nav-buttons">ACCOUNT</h1>
-        </Link>
-        <Link to="/">
-          <h1 className="nav-buttons">
-            CART<sub>0</sub>
-          </h1>
-        </Link>
-      </div>
-      <div className="nav-line"></div>
-      <div className="message">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae libero
-        tempore.
-      </div>
-    </nav>
+    <>
+      <nav id="navigation">
+        <div className="nav-btn-container">
+          <Link to="/">
+            <h1 className="nav-home">FANDORA</h1>
+          </Link>
+          <Link to="/" className="product-link" onClick={() => productClick()}>
+            <h1 className="nav-buttons">PRODUCTS</h1>
+          </Link>
+          <Link to="/">
+            <h1 className="nav-buttons">ACCOUNT</h1>
+          </Link>
+          <Link to="/">
+            <h1 className="nav-buttons">
+              CART<sub>{cart}</sub>
+            </h1>
+          </Link>
+        </div>
+        <div className="nav-line"></div>
+        <div className="message">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+          libero tempore.
+        </div>
+      </nav>
+      <IntroSection />
+      <ProductSection cart={cart} setCart={setCart} />
+    </>
   );
 };
 
@@ -139,9 +141,7 @@ const IntroSection = () => {
               <button
                 className="intro-button"
                 onClick={() => introButtonClick()}
-              >
-                <img src={down_arrow} />
-              </button>
+              ></button>
             </div>
           </div>
         </div>
@@ -150,7 +150,22 @@ const IntroSection = () => {
   );
 };
 
-const ProductSection = () => {
+const buttons = [];
+let count = 0;
+const ProductSection = ({ cart, setCart }) => {
+  const addCart = (btn) => {
+    count += 1;
+    if (buttons.includes(btn) === false) {
+      setCart(cart + 1);
+      buttons.push(btn);
+    } else {
+      setCart(cart - 1);
+      const index = buttons.indexOf(btn);
+      if (index > -1) {
+        buttons.splice(index, 1);
+      }
+    }
+  };
   return (
     <>
       <section id="product-section">
@@ -160,61 +175,99 @@ const ProductSection = () => {
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="170,000.00"
           car_image={ac_shelby_cobra}
+          btn_id={1}
+          addCart={addCart}
         />
         <Product
           car_name="AUDI R8"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="169,000.00"
           car_image={audi_r8}
+          btn_id={2}
+          addCart={addCart}
         />
         <Product
           car_name="AUDI R8 SPYDER"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="219,445.00"
           car_image={audi_r8_spyder}
+          btn_id={3}
+          addCart={addCart}
         />
         <Product
           car_name="BUGATTI CHIRON"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="3,000,000.00"
           car_image={bugatti_chiron}
+          btn_id={4}
+          addCart={addCart}
         />
         <Product
           car_name="CHEVROLET CAMARO SS"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="25,000.00"
           car_image={chevrolet_camaro_ss}
+          btn_id={5}
+          addCart={addCart}
         />
         <Product
           car_name="AC SHELBY COBRA"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="170,000.00"
           car_image={ac_shelby_cobra}
+          btn_id={6}
+          addCart={addCart}
         />
         <Product
           car_name="DELOREAN"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="999,999,999.00"
           car_image={delorean}
+          btn_id={7}
+          addCart={addCart}
         />
         <Product
           car_name="FORD THUNDERBIRD 1961"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="27,000.00"
           car_image={ford_thunderbird}
+          btn_id={8}
+          addCart={addCart}
         />
         <Product
           car_name="MCLAREN F1 1994"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="14,500,000.00"
           car_image={mclaren_f1}
+          btn_id={9}
+          addCart={addCart}
         />
       </section>
     </>
   );
 };
 
-const Product = ({ car_name, car_description, car_price, car_image }) => {
+const Product = ({
+  car_name,
+  car_description,
+  car_price,
+  car_image,
+  btn_id,
+  addCart,
+}) => {
+  const [button_text, setButton_Text] = useState("Add to Cart");
+  const changeBtnDesign = (btn_id) => {
+    if (button_text === "Add to Cart") {
+      setButton_Text("Remove");
+      document.getElementById(`${btn_id}`).style.backgroundColor =
+        "transparent";
+      document.getElementById(`${btn_id}`).style.color = "#282828";
+    } else {
+      setButton_Text("Add to Cart");
+      document.getElementById(`${btn_id}`).style.backgroundColor = "#282828";
+      document.getElementById(`${btn_id}`).style.color = "#f5f5f5";
+    }
+  };
   return (
     <div className="car-container">
       <h1>{car_name}</h1>
@@ -226,7 +279,16 @@ const Product = ({ car_name, car_description, car_price, car_image }) => {
             <Link href="cart.html">
               <button>Buy Now</button>
             </Link>
-            <button className="car-add">Add to Cart</button>
+            <button
+              id={btn_id}
+              className="car-add"
+              onClick={() => {
+                addCart(btn_id);
+                changeBtnDesign(btn_id);
+              }}
+            >
+              {button_text}
+            </button>
           </div>
         </div>
         <div className="car-image">
