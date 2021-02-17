@@ -5,37 +5,15 @@ import "./account.css";
 const AccountPage = () => {
   return (
     <>
-      <NavBar2 />
       <LogInSection />
     </>
-  );
-};
-
-const NavBar2 = () => {
-  return (
-    <nav id="navigation-2">
-      <div className="nav-btn-container-2">
-        <Link to=".">
-          <h1 className="nav-home-2">FANDORA</h1>
-        </Link>
-        <Link to="cart.html">
-          <h1 className="nav-buttons-2">
-            CART<sub>0</sub>
-          </h1>
-        </Link>
-      </div>
-      <div className="nav-line-2"></div>
-      <div className="message-2">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae libero
-        tempore.
-      </div>
-    </nav>
   );
 };
 
 const LogInSection = () => {
   return (
     <section id="log-in-section">
+      <NavBar2 />
       <div className="form-container">
         <form action="." method="GET">
           <div>
@@ -56,6 +34,28 @@ const LogInSection = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const NavBar2 = () => {
+  return (
+    <nav id="navigation-2">
+      <div className="nav-btn-container-2">
+        <Link to="/">
+          <h1 className="nav-home-2">FANDORA</h1>
+        </Link>
+        <Link to="/checkout">
+          <h1 className="nav-buttons-2">
+            CART<sub>0</sub>
+          </h1>
+        </Link>
+      </div>
+      <div className="nav-line-2"></div>
+      <div className="message-2">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae libero
+        tempore.
+      </div>
+    </nav>
   );
 };
 

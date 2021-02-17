@@ -96,6 +96,7 @@ body {
 .message {
   color: #6e6e6e;
   font-size: 0.9em;
+  text-align: center;
 }
 
 /* Introduction Section */

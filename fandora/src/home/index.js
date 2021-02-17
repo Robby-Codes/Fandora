@@ -46,7 +46,7 @@ const NavBar1 = () => {
           <Link to="/account">
             <h1 className="nav-buttons">ACCOUNT</h1>
           </Link>
-          <Link to="/">
+          <Link to="/checkout">
             <h1 className="nav-buttons">
               CART<sub>{cart}</sub>
             </h1>
