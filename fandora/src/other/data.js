@@ -9,3 +9,13 @@ export const data = {
   8: [false, "MCLAREN F1 1994", 14500000.0],
   9: [false, "PEOGEOT ONYX", 2500000.0],
 };
+
+export const totalAmount = (data) => {
+  let total = 0;
+  for (const [key, value] of Object.entries(data)) {
+    if (value[0] === true) {
+      total += value[2];
+    }
+  }
+  return total;
+};
