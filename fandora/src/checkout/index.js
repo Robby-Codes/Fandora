@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { data, totalAmount } from "../other/data";
+import { formatNumbers } from "../other/formatnumbers";
 import ac_shelby_cobra from "../assets/ac-cobra.png";
 import audi_r8 from "../assets/audi-r8.png";
 import audi_r8_spyder from "../assets/audi-r8-spyder.png";
@@ -216,7 +217,7 @@ const CartItem = ({
         </div>
         <div className="product-price">
           <p>
-            $<span>{price}</span>
+            $<span>{formatNumbers(price)}</span>
           </p>
         </div>
       </div>
@@ -254,7 +255,7 @@ const Checkout = ({ totalamount }) => {
       <div className="total-price">
         <h1>TOTAL</h1>
         <p>
-          $<span className="t_price">{totalamount}</span>
+          $<span className="t_price">{formatNumbers(totalamount)}</span>
         </p>
       </div>
       <div>
