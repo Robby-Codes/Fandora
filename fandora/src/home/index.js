@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import "./homeanimations";
 import { data } from "../other/data";
 import mcar from "../assets/im1.png";
@@ -21,8 +22,15 @@ import "./home.css";
 const HomePage = () => {
   return (
     <>
-      <NavBar1 />
-      <Footer />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <NavBar1 />
+        <Footer />
+      </motion.div>
     </>
   );
 };

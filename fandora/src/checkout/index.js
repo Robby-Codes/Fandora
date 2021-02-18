@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { data, totalAmount } from "../other/data";
 import { formatNumbers } from "../other/formatnumbers";
 import ac_shelby_cobra from "../assets/ac-cobra.png";
@@ -16,7 +17,14 @@ import "./checkout.css";
 const CheckoutPage = () => {
   return (
     <>
-      <NavBar3 />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <NavBar3 />
+      </motion.div>
     </>
   );
 };

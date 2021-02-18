@@ -41,7 +41,7 @@ function carScroll(element) {
       var elem = element[x];
       var position = element[x].getBoundingClientRect().top;
       if (position - windowHeight <= 0) {
-        elem.style.transition = "all 2s";
+        elem.style.transition = "all 1s";
         elem.style.transform = "translate(0px)";
         elem.style.opacity = "1";
       } else if (position - windowHeight > 0) {

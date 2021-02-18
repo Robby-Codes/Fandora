@@ -1,40 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { data } from "../other/data";
 import "./account.css";
 
 const AccountPage = () => {
   return (
     <>
-      <LogInSection />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <section id="log-in-section">
+          <NavBar2 />
+          <LogInSection />
+          <RegisterSection />
+        </section>
+      </motion.div>
     </>
-  );
-};
-
-const LogInSection = () => {
-  return (
-    <section id="log-in-section">
-      <NavBar2 />
-      <div className="form-container">
-        <form action="." method="GET">
-          <div>
-            <label for="username">Username</label>
-            <input type="text" id="username" required />
-          </div>
-          <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" required />
-          </div>
-          <div className="form-buttons">
-            <input type="submit" />
-          </div>
-        </form>
-        <div>
-          <h1>Don't Have An Account?</h1>
-          <button>Register</button>
-        </div>
-      </div>
-    </section>
   );
 };
 
@@ -64,6 +49,96 @@ const NavBar2 = () => {
         tempore.
       </div>
     </nav>
+  );
+};
+
+const LogInSection = () => {
+  const registerClick = () => {
+    document.getElementsByClassName("form-container")[0].style.transition =
+      "all 1s";
+    document.getElementsByClassName("form-container")[0].style.transform =
+      "translate(-200%, 0)";
+    document.getElementsByClassName("register-container")[0].style.transition =
+      "all 1s";
+    document.getElementsByClassName("register-container")[0].style.transform =
+      "translate(0%, 0)";
+  };
+  return (
+    <div className="form-container">
+      <h1>Log In</h1>
+      <form action="." method="GET">
+        <div>
+          <input type="text" id="username" placeholder="Username" required />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+        </div>
+        <div className="form-buttons">
+          <input type="submit" value="Log In" />
+        </div>
+      </form>
+      <div>
+        <h1>Don't Have An Account?</h1>
+        <button onClick={() => registerClick()}>Register</button>
+      </div>
+    </div>
+  );
+};
+
+const RegisterSection = () => {
+  const loginClick = () => {
+    document.getElementsByClassName("form-container")[0].style.transition =
+      "all 1s";
+    document.getElementsByClassName("form-container")[0].style.transform =
+      "translate(0%, 0)";
+    document.getElementsByClassName("register-container")[0].style.transition =
+      "all 1s";
+    document.getElementsByClassName("register-container")[0].style.transform =
+      "translate(200%, 0)";
+  };
+
+  return (
+    <>
+      <div className="register-container">
+        <h1> Create An Account</h1>
+        <form action="." method="GET">
+          <div>
+            <input
+              type="text"
+              id="username"
+              placeholder="New Username"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              placeholder="New Password"
+              required
+            />
+          </div>
+          <div>
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div>
+            <input type="tel" id="tel" placeholder="Phone Number" required />
+          </div>
+          <div className="form-buttons">
+            <input type="submit" value="Create Account" />
+          </div>
+        </form>
+        <div>
+          <h1>Already have an account?</h1>
+          <button onClick={() => loginClick()}>Log In</button>
+        </div>
+      </div>
+    </>
   );
 };
 
