@@ -182,7 +182,7 @@
   overflow-y: auto;
 }
 
-.cart-product {
+.item-container {
   width: 100%;
   height: auto;
   margin-bottom: 30px;
@@ -198,7 +198,7 @@
   margin-right: 10px;
 }
 
-.cart-product img {
+.item-container img {
   height: 100%;
   width: 100%;
 }

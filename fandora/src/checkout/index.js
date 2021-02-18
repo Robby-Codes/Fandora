@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { data } from "../other/data";
 import ac_shelby_cobra from "../assets/ac-cobra.png";
 import audi_r8 from "../assets/audi-r8.png";
 import audi_r8_spyder from "../assets/audi-r8-spyder.png";
@@ -21,6 +22,12 @@ const CheckoutPage = () => {
 };
 
 const NavBar3 = () => {
+  let num_of_items = 0;
+  for (const [key, value] of Object.entries(data)) {
+    if (value[0] === true) {
+      num_of_items += 1;
+    }
+  }
   return (
     <nav id="navigation-3">
       <div className="nav-btn-container-3">
@@ -32,7 +39,7 @@ const NavBar3 = () => {
         </Link>
         <Link to="/checkout">
           <h1 className="nav-buttons-3">
-            CART<sub>0</sub>
+            CART<sub>{num_of_items}</sub>
           </h1>
         </Link>
       </div>
@@ -57,6 +64,13 @@ const CartAndCheckoutSection = () => {
 };
 
 const Cart = () => {
+  let num_of_items = 0;
+  for (const [key, value] of Object.entries(data)) {
+    if (value[0] === true) {
+      num_of_items += 1;
+    }
+  }
+  const [cartamount, setCartAmount] = useState(num_of_items);
   return (
     <div className="cart">
       <div className="cart-message">
@@ -65,174 +79,133 @@ const Cart = () => {
       </div>
       <div className="product-num">
         <h1>
-          YOUR CART (<span className="cart-amount">9</span>)
+          YOUR CART (<span className="cart-amount">{cartamount}</span>)
         </h1>
       </div>
       <div className="products-container">
-        <CartItem />
+        <CartItem
+          id={1}
+          action={data[1][0]}
+          title={data[1][1]}
+          price={data[1][2]}
+          image={ac_shelby_cobra}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={2}
+          action={data[2][0]}
+          title={data[2][1]}
+          price={data[2][2]}
+          image={audi_r8}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={3}
+          action={data[3][0]}
+          title={data[3][1]}
+          price={data[3][2]}
+          image={audi_r8_spyder}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={4}
+          action={data[4][0]}
+          title={data[4][1]}
+          price={data[4][2]}
+          image={bugatti_chiron}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={5}
+          action={data[5][0]}
+          title={data[5][1]}
+          price={data[5][2]}
+          image={chevrolet_camaro_ss}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={6}
+          action={data[6][0]}
+          title={data[6][1]}
+          price={data[6][2]}
+          image={delorean}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={7}
+          action={data[7][0]}
+          title={data[7][1]}
+          price={data[7][2]}
+          image={ford_thunderbird}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={8}
+          action={data[8][0]}
+          title={data[8][1]}
+          price={data[8][2]}
+          image={mclaren_f1}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
+        <CartItem
+          id={9}
+          action={data[9][0]}
+          title={data[9][1]}
+          price={data[9][2]}
+          image={peogeot_onyx}
+          cartamount={cartamount}
+          setCartAmount={setCartAmount}
+        />
       </div>
     </div>
   );
 };
 
-const CartItem = () => {
-  return (
-    <>
-      <div className="cart-product ac-shelby-cobra">
+const CartItem = ({
+  id,
+  action,
+  title,
+  price,
+  image,
+  cartamount,
+  setCartAmount,
+}) => {
+  const deleteItem = (id) => {
+    console.log("Button Ran");
+    data[id][0] = false;
+    setCartAmount(cartamount - 1);
+  };
+  if (action === true) {
+    return (
+      <div className="item-container">
         <div className="product-image">
-          <img src={ac_shelby_cobra} />
+          <img src={image} />
         </div>
         <div className="product-info">
-          <h1>AC SHELBY COBRA</h1>
+          <h1>{title}</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div>
-            <button className="remove-ac-shelby-cobra">REMOVE</button>
+            <button onClick={() => deleteItem(id)}>REMOVE</button>
           </div>
         </div>
         <div className="product-price">
           <p>
-            $<span className="ac-shelby-cobra-price">170,000.00</span>
+            $<span>{price}</span>
           </p>
         </div>
       </div>
-      <div className="cart-product audi-r8">
-        <div className="product-image">
-          <img src={audi_r8} />
-        </div>
-        <div className="product-info">
-          <h1>AUDI R8</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-audi-r8">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="audi-r8-price">169,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product bugatti-chiron">
-        <div className="product-image">
-          <img src={bugatti_chiron} />
-        </div>
-        <div className="product-info">
-          <h1>BUGATTI CHIRON</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-bugatti-chiron">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="bugatti-chiron-price">3,000,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product chevrolet-camaro-ss">
-        <div className="product-image">
-          <img src={chevrolet_camaro_ss} />
-        </div>
-        <div className="product-info">
-          <h1>CHEV. CAMARO SS</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-chevrolet-camaro-ss">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="chevrolet-camaro-ss-price">25,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product delorean">
-        <div className="product-image">
-          <img src={delorean} />
-        </div>
-        <div className="product-info">
-          <h1>DELOREAN</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-delorean">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="delorean-price">999,999,999.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product ford-thunderbird">
-        <div className="product-image">
-          <img src={ford_thunderbird} />
-        </div>
-        <div className="product-info">
-          <h1>F. THUNDERBIRD</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-ford-thunderbird">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="ford-thunderbird-price">27,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product mclaren-f1">
-        <div className="product-image">
-          <img src={mclaren_f1} />
-        </div>
-        <div className="product-info">
-          <h1>MCLAREN F1</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-mclaren-f1">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="mclaren-f1-price">14,000,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product peugeot-onyx">
-        <div className="product-image">
-          <img src={peogeot_onyx} />
-        </div>
-        <div className="product-info">
-          <h1>PEUGEOT ONYX</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-peugeot-onyx">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="peugeot-onyx-price">2,500,000.00</span>
-          </p>
-        </div>
-      </div>
-      <div className="cart-product audi-r8-spyder">
-        <div className="product-image">
-          <img src={audi_r8_spyder} />
-        </div>
-        <div className="product-info">
-          <h1>AUDI R8 SPYDER</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <div>
-            <button className="remove-audi-r8-spyder">REMOVE</button>
-          </div>
-        </div>
-        <div className="product-price">
-          <p>
-            $<span className="audi-r8-spyder-price">219,000.00</span>
-          </p>
-        </div>
-      </div>
-    </>
-  );
+    );
+  } else {
+    return null;
+  }
 };
 
 const Checkout = () => {

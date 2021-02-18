@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./homeanimations";
+import { data } from "../other/data";
 import mcar from "../assets/im1.png";
 import jet from "../assets/jet1.png";
 import star from "../assets/star.png";
@@ -33,6 +34,12 @@ const NavBar1 = () => {
       .getElementById("product-section")
       .scrollIntoView({ behavior: "smooth" });
   };
+  let num_of_items = 0;
+  for (const [key, value] of Object.entries(data)) {
+    if (value[0] === true) {
+      num_of_items += 1;
+    }
+  }
   return (
     <>
       <nav id="navigation">
@@ -48,7 +55,7 @@ const NavBar1 = () => {
           </Link>
           <Link to="/checkout">
             <h1 className="nav-buttons">
-              CART<sub>{cart}</sub>
+              CART<sub>{num_of_items}</sub>
             </h1>
           </Link>
         </div>
@@ -211,14 +218,6 @@ const ProductSection = ({ cart, setCart }) => {
           addCart={addCart}
         />
         <Product
-          car_name="AC SHELBY COBRA"
-          car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
-          car_price="170,000.00"
-          car_image={ac_shelby_cobra}
-          btn_id={6}
-          addCart={addCart}
-        />
-        <Product
           car_name="DELOREAN"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="999,999,999.00"
@@ -242,6 +241,14 @@ const ProductSection = ({ cart, setCart }) => {
           btn_id={9}
           addCart={addCart}
         />
+        <Product
+          car_name="PEOGEOT ONYX"
+          car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
+          car_price="2,500,000.00"
+          car_image={peogeot_onyx}
+          btn_id={6}
+          addCart={addCart}
+        />
       </section>
     </>
   );
@@ -259,15 +266,19 @@ const Product = ({
   const changeBtnDesign = (btn_id) => {
     if (button_text === "Add to Cart") {
       setButton_Text("Remove");
-      document.getElementById(`${btn_id}`).style.backgroundColor =
-        "transparent";
-      document.getElementById(`${btn_id}`).style.color = "#282828";
     } else {
       setButton_Text("Add to Cart");
-      document.getElementById(`${btn_id}`).style.backgroundColor = "#282828";
-      document.getElementById(`${btn_id}`).style.color = "#f5f5f5";
     }
   };
+  const rememberStyle = () => {
+    if (data[btn_id][0] === true) {
+      setButton_Text("Remove");
+    }
+  };
+  useEffect(() => {
+    rememberStyle();
+  }, []);
+
   return (
     <div className="car-container">
       <h1>{car_name}</h1>
@@ -276,8 +287,14 @@ const Product = ({
           <p>{car_description}</p>
           <p>${car_price}</p>
           <div className="button-container">
-            <Link href="cart.html">
-              <button>Buy Now</button>
+            <Link to="/checkout">
+              <button
+                onClick={() => {
+                  data[btn_id][0] = true;
+                }}
+              >
+                Buy Now
+              </button>
             </Link>
             <button
               id={btn_id}
@@ -285,6 +302,7 @@ const Product = ({
               onClick={() => {
                 addCart(btn_id);
                 changeBtnDesign(btn_id);
+                data[btn_id][0] = !data[btn_id][0];
               }}
             >
               {button_text}

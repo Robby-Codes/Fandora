@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { data } from "../other/data";
 import "./account.css";
 
 const AccountPage = () => {
@@ -38,6 +39,13 @@ const LogInSection = () => {
 };
 
 const NavBar2 = () => {
+  let num_of_items = 0;
+  for (const [key, value] of Object.entries(data)) {
+    console.log(value[0]);
+    if (value[0] === true) {
+      num_of_items += 1;
+    }
+  }
   return (
     <nav id="navigation-2">
       <div className="nav-btn-container-2">
@@ -46,7 +54,7 @@ const NavBar2 = () => {
         </Link>
         <Link to="/checkout">
           <h1 className="nav-buttons-2">
-            CART<sub>0</sub>
+            CART<sub>{num_of_items}</sub>
           </h1>
         </Link>
       </div>
