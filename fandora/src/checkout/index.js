@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { data, totalAmount } from "../other/data";
 import { formatNumbers } from "../other/formatnumbers";
 import ac_shelby_cobra from "../assets/ac-cobra.png";
@@ -14,6 +14,7 @@ import mclaren_f1 from "../assets/mclaren-f1-1994.jpg";
 import peogeot_onyx from "../assets/peogeot-onyx.png";
 import "./checkout.css";
 
+// Main Checkout Page Component, using framer motions for page transition animations
 const CheckoutPage = () => {
   return (
     <>
@@ -29,7 +30,9 @@ const CheckoutPage = () => {
   );
 };
 
+// Nav Bar for Checkout page
 const NavBar3 = () => {
+  // find number of items in cart to display on navbar
   let num_of_items = 0;
   for (const [key, value] of Object.entries(data)) {
     if (value[0] === true) {
@@ -67,6 +70,7 @@ const NavBar3 = () => {
   );
 };
 
+// Cart and Checkout Section Component
 const CartAndCheckoutSection = ({ cartamount, setCartAmount }) => {
   return (
     <section id="cart-and-checkout-section">
@@ -77,6 +81,7 @@ const CartAndCheckoutSection = ({ cartamount, setCartAmount }) => {
   );
 };
 
+// Cart Component
 const Cart = ({ cartamount, setCartAmount }) => {
   const [totalamount, setTotalAmount] = useState(totalAmount(data));
   return (
@@ -189,6 +194,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
   );
 };
 
+// Cart Item Component
 const CartItem = ({
   id,
   action,
@@ -199,6 +205,7 @@ const CartItem = ({
   setCartAmount,
   setTotalAmount,
 }) => {
+  // Delete cart item on "remove button" click
   const deleteItem = (id) => {
     data[id][0] = false;
     setCartAmount(cartamount - 1);
@@ -235,8 +242,8 @@ const CartItem = ({
   }
 };
 
+// Checkout component
 const Checkout = ({ totalamount }) => {
-  console.log("Rendered Total: ", totalamount);
   return (
     <div className="checkout">
       <h1>SUMMARY</h1>

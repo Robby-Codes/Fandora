@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { Link, Redirect } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./homeanimations";
 import { data } from "../other/data";
 import mcar from "../assets/im1.png";
@@ -19,6 +19,7 @@ import mc from "../assets/mc.png";
 import visa from "../assets/visa.png";
 import "./home.css";
 
+// Main Home Page component, using framer motion for page transition animations
 const HomePage = () => {
   return (
     <>
@@ -35,13 +36,16 @@ const HomePage = () => {
   );
 };
 
+// Nav Bar component for home page
 const NavBar1 = () => {
   const [cart, setCart] = useState(0);
+  // smooth scroll to product component on click
   const productClick = () => {
     document
       .getElementById("product-section")
       .scrollIntoView({ behavior: "smooth" });
   };
+  // find number of items in cart to display on navbar
   let num_of_items = 0;
   for (const [key, value] of Object.entries(data)) {
     if (value[0] === true) {
@@ -50,7 +54,7 @@ const NavBar1 = () => {
   }
   return (
     <>
-      <nav id="navigation">
+      <nav id="navigation-1">
         <div className="nav-btn-container">
           <Link to="/">
             <h1 className="nav-home">FANDORA</h1>
@@ -79,7 +83,9 @@ const NavBar1 = () => {
   );
 };
 
+// Intro section component for homepage
 const IntroSection = () => {
+  // smooth scroll to product section on click
   const introButtonClick = () => {
     document
       .getElementById("product-section")
@@ -165,9 +171,14 @@ const IntroSection = () => {
   );
 };
 
+// button array and count variable used to keep track
+// of which buttons are pressed, and to update
+// data from "../other/data"
 const buttons = [];
 let count = 0;
+// Product section component.
 const ProductSection = ({ cart, setCart }) => {
+  // updata navbar cart number and data from "../other/data" on click
   const addCart = (btn) => {
     count += 1;
     if (buttons.includes(btn) === false) {
@@ -262,6 +273,7 @@ const ProductSection = ({ cart, setCart }) => {
   );
 };
 
+// Product component, rendered depending on data from "../other/data"
 const Product = ({
   car_name,
   car_description,
@@ -271,6 +283,7 @@ const Product = ({
   addCart,
 }) => {
   const [button_text, setButton_Text] = useState("Add to Cart");
+  // change button text if pressed
   const changeBtnDesign = (btn_id) => {
     if (button_text === "Add to Cart") {
       setButton_Text("Remove");
@@ -278,6 +291,7 @@ const Product = ({
       setButton_Text("Add to Cart");
     }
   };
+  // remember what text the button should be displaying
   const rememberStyle = () => {
     if (data[btn_id][0] === true) {
       setButton_Text("Remove");
@@ -286,7 +300,6 @@ const Product = ({
   useEffect(() => {
     rememberStyle();
   }, []);
-
   return (
     <div className="car-container">
       <h1>{car_name}</h1>
@@ -325,6 +338,7 @@ const Product = ({
   );
 };
 
+// Footer section component
 const Footer = () => {
   return (
     <>

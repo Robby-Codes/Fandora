@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { data } from "../other/data";
+import { data, coverpage } from "../other/data";
 import "./account.css";
 
+// Main Account Page Component using framer motion for page transition animations
 const AccountPage = () => {
   return (
     <>
@@ -23,10 +24,11 @@ const AccountPage = () => {
   );
 };
 
+// Nav Bar for account page
 const NavBar2 = () => {
+  // find number of items in cart to display on navbar
   let num_of_items = 0;
   for (const [key, value] of Object.entries(data)) {
-    console.log(value[0]);
     if (value[0] === true) {
       num_of_items += 1;
     }
@@ -52,7 +54,9 @@ const NavBar2 = () => {
   );
 };
 
+// Log In Section Component
 const LogInSection = () => {
+  // animate form on "register button" click
   const registerClick = () => {
     document.getElementsByClassName("form-container")[0].style.transition =
       "all 1s";
@@ -90,7 +94,9 @@ const LogInSection = () => {
   );
 };
 
+// Register Section component
 const RegisterSection = () => {
+  // Animate form on "log in" button click
   const loginClick = () => {
     document.getElementsByClassName("form-container")[0].style.transition =
       "all 1s";
@@ -101,7 +107,6 @@ const RegisterSection = () => {
     document.getElementsByClassName("register-container")[0].style.transform =
       "translate(200%, 0)";
   };
-
   return (
     <>
       <div className="register-container">

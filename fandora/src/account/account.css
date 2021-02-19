@@ -37,6 +37,7 @@
   border-radius: 100px;
   background-color: transparent;
   margin-bottom: 5px;
+  transition: all 0.3s;
 }
 
 #navigation-2 a {
@@ -62,6 +63,10 @@
 
 .nav-line-2 {
   width: 100%;
+}
+
+#navigation-2 h1:hover {
+  border: 2px solid black;
 }
 
 /* Log In Section & Register Section */

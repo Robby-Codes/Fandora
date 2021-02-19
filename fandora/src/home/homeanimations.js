@@ -13,12 +13,12 @@ function navScroll(element) {
         var elem = element[x];
         var position = element[x].getBoundingClientRect().top;
         if (position - windowHeight <= 0) {
-          const nav = document.getElementById("navigation");
+          const nav = document.getElementById("navigation-1");
           nav.style.transition = "all 0.5s";
           nav.style.backgroundColor = "#f5f5f5";
           nav.style.border = "5px solid #282828";
         } else if (position - windowHeight > 0) {
-          const nav = document.getElementById("navigation");
+          const nav = document.getElementById("navigation-1");
           nav.style.transition = "all 0.5s";
           nav.style.backgroundColor = "transparent";
           nav.style.borderColor = "transparent";

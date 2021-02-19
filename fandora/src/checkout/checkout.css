@@ -38,6 +38,7 @@
   border-radius: 100px;
   background-color: transparent;
   margin-bottom: 5px;
+  transition: all 0.3s;
 }
 
 #navigation-3 a {
@@ -59,6 +60,10 @@
   color: #6e6e6e;
   font-size: 0.9em;
   text-align: center;
+}
+
+#navigation-3 h1:hover {
+  border: 2px solid black;
 }
 
 /* Cart and Checkout Section */

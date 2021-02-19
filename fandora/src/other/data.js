@@ -1,3 +1,5 @@
+// Information about each car, including whether or not they have
+// been placed in the cart.
 export const data = {
   1: [false, "AC SHELBY COBRA", 170000.0],
   2: [false, "AUDI R8", 169000.0],
@@ -10,6 +12,7 @@ export const data = {
   9: [false, "PEOGEOT ONYX", 2500000.0],
 };
 
+// finds the total price of all the cars placed inside the cart
 export const totalAmount = (data) => {
   let total = 0;
   for (const [key, value] of Object.entries(data)) {

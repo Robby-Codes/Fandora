@@ -37,7 +37,7 @@ body {
 
 /* Navigation */
 
-#navigation {
+#navigation-1 {
   width: 60%;
   padding: 10px 0 10px 0;
   border: 5px solid transparent;
@@ -69,16 +69,21 @@ body {
   font-weight: bold;
 }
 
-#navigation h1 {
+#navigation-1 h1 {
   height: 30px;
   padding: 3px 8px 2px 8px;
   border: 2px solid transparent;
   border-radius: 100px;
   background-color: transparent;
   margin-bottom: 5px;
+  transition: all 0.3s;
 }
 
-#navigation a {
+#navigation-1 h1:hover {
+  border: 2px solid black;
+}
+
+#navigation-1 a {
   text-decoration: none;
 }
 
