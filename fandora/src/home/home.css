@@ -448,7 +448,7 @@ footer a {
     width: 90%;
     margin: 30px auto 0 auto;
     padding: 5px;
-    margin: 0 auto 0 40px;
+    margin: 10px auto 0 40px;
     position: static;
   }
 
@@ -596,7 +596,7 @@ footer a {
   /* Changes to Product Section */
 
   #product-section {
-    padding: 20px 20px 0 50px;
+    padding: 20px 0px 0 0px;
   }
 
   #product-section > h1 {

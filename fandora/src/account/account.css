@@ -254,6 +254,102 @@ input[type="submit"]:hover {
 
 /*Changes to phones screens (portrait)*/
 @media screen and (min-width: 250px) and (max-width: 500px) {
+  /* Changes to Navigation*/
+
+  #navigation-2 {
+    width: 90%;
+    padding: 5px;
+    margin-top: 10px;
+    top: 0;
+  }
+
+  #navigation-2 h1 {
+    height: 20px;
+  }
+
+  #navigation-2 h1:hover {
+    border: 2px solid transparent;
+  }
+
+  .nav-buttons-2,
+  .nav-home-2 {
+    font-size: 0.6em;
+    margin-right: 0px;
+  }
+
+  .nav-line-2 {
+    height: 2px;
+    width: 90%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .message-2 {
+    font-size: 0.6em;
+    width: 95%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* Changes to Log In Section and Register Section */
+
+  #log-in-section {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 70px;
+  }
+
+  .form-container,
+  .register-container {
+    font-size: 0.6em;
+    width: 95%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .form-container > h1,
+  .register-container > h1 {
+    margin-bottom: 10px;
+  }
+
+  input {
+    height: 20px;
+    width: 90%;
+  }
+
+  .form-buttons {
+    height: auto;
+    width: auto;
+  }
+
+  .form-buttons input,
+  .form-buttons button {
+    height: 30px;
+    width: 80px;
+  }
+
+  .form-buttons input {
+    margin-top: 0px;
+  }
+
+  .form-buttons > div {
+    margin-bottom: 5px;
+  }
+
+  .form-container > div button,
+  .register-container > div button {
+    height: 20px;
+    width: 60px;
+    margin-top: 5px;
+  }
+
+  form > div {
+    margin-bottom: 10px;
+  }
 }
 
 /*Changes to phones screens (landscape)*/
