@@ -251,3 +251,19 @@ input[type="submit"]:hover {
   animation: linkHover 0.5s;
   -webkit-animation-fill-mode: forwards;
 }
+
+/*Changes to phones screens (portrait)*/
+@media screen and (min-width: 250px) and (max-width: 500px) {
+}
+
+/*Changes to phones screens (landscape)*/
+@media screen and (min-width: 501px) and (max-width: 764px) {
+}
+
+/* Changes for intermediate screen sizes*/
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+}
+
+/* Changes for laptops and desktop screens*/
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+}

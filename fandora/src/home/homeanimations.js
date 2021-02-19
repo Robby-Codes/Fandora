@@ -7,7 +7,7 @@ navScroll(mark);
 function navScroll(element) {
   var windowHeight = window.innerHeight;
   var windowWidth = window.innerWidth;
-  if (windowWidth > 840) {
+  if (windowWidth > 764) {
     window.addEventListener("scroll", () => {
       for (var x = 0; x < element.length; x++) {
         var elem = element[x];

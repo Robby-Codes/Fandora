@@ -54,6 +54,9 @@ body {
 
 .nav-btn-container {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
 }
 
 .nav-buttons,
@@ -435,4 +438,639 @@ footer a {
   height: auto;
   width: 50px;
   margin-right: 30px;
+}
+
+/*Changes to phones screens (portrait)*/
+@media screen and (min-width: 250px) and (max-width: 500px) {
+  /* Changes to Nav Bar */
+
+  #navigation-1 {
+    width: 90%;
+    margin: 30px auto 0 auto;
+    padding: 5px;
+    margin: 0 auto 0 40px;
+    position: static;
+  }
+
+  #navigation-1 h1:hover {
+    border: 2px solid transparent;
+  }
+
+  .nav-buttons,
+  .nav-home {
+    font-size: 0.6em;
+    margin-right: 0px;
+  }
+
+  .nav-line {
+    height: 2px;
+    width: 100%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-size: 0.7em;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Changes to Introduction Section */
+
+  #intro-section {
+    padding: 20px 20px 20px 50px;
+  }
+
+  .intro-content-container > h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .intro-message {
+    font-size: 0.75em;
+    width: 50%;
+  }
+
+  .intro-message > p {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .banner-btn {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+  }
+
+  .banner-btn h1 {
+    font-size: 0.6em;
+    padding-bottom: 2px;
+  }
+
+  .banner-btn p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .btn-extra h1 {
+    font-size: 0.9em;
+  }
+
+  .banner-image {
+    height: 30px;
+  }
+
+  .banner-image img {
+    width: 70%;
+    left: 42%;
+    bottom: 130px;
+  }
+
+  .intro-bonus img:nth-of-type(2) {
+    display: none;
+  }
+
+  .bonus-image {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .jet1 {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .bonus-text h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .bonus-text p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+
+  .bonus-text small {
+    font-size: 0.6em;
+  }
+
+  .intro-review {
+    margin-top: 20px;
+  }
+
+  .media1 {
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+
+  .media2 {
+    font-size: 0.5em;
+  }
+
+  .media3 {
+    font-size: 0.55em;
+    margin-left: 10px;
+  }
+
+  .quote {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+
+  .intro-review img {
+    height: 9px;
+    width: 9px;
+  }
+
+  .quote button {
+    height: 30px;
+    width: 80px;
+    margin-top: 50px;
+  }
+
+  #intro-section button:active img {
+    content: url("../assets/down-arrow.png");
+    background-color: #282828;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 20px 20px 0 50px;
+  }
+
+  #product-section > h1 {
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+
+  .car-container {
+    height: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 3px 3px 6px black;
+  }
+
+  .car-container > h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .car-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .car-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .car-image {
+    width: 80%;
+  }
+  .car-image img {
+    border: none;
+    box-shadow: none;
+  }
+
+  .car-info p {
+    font-size: 0.8em;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .car-info button {
+    font-size: 0.8em;
+    height: 80px;
+    width: 80px;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 0 100px 50px;
+    overflow: hidden;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-line {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .footer-links a {
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .other-links {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .other-links small {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  .other-links small span {
+    font-size: 0.8em;
+  }
+
+  .footer-images {
+    margin-top: 50px;
+    padding-right: 50%;
+  }
+}
+
+/*Changes to phones screens (landscape)*/
+@media screen and (min-width: 501px) and (max-width: 764px) {
+  /* Changes to Navigation */
+
+  #navigation-1 {
+    position: static;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+  }
+
+  .nav-buttons,
+  .nav-home {
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .nav-line {
+    height: 2px;
+    width: 90%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-size: 0.75em;
+    width: 80%;
+    text-align: center;
+  }
+
+  #navigation-1 h1:hover {
+    border: 2px solid transparent;
+  }
+
+  /* Changes to Introduction Section */
+
+  #intro-section {
+    padding: 20px 10px 10px 30px;
+  }
+
+  .intro-content-container > h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .intro-message {
+    font-size: 0.8em;
+    width: 45%;
+  }
+
+  .intro-message > p {
+    margin-bottom: 10px;
+  }
+
+  .banner-btn {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  .banner-btn h1 {
+    font-size: 0.65em;
+    padding-bottom: 2px;
+  }
+
+  .banner-btn p {
+    font-size: 0.85em;
+    text-align: center;
+  }
+
+  .btn-extra h1 {
+    font-size: 1em;
+  }
+
+  .banner-image {
+    height: 50px;
+  }
+
+  .banner-image img {
+    width: 60%;
+    left: 42%;
+    bottom: 160px;
+  }
+
+  .intro-bonus img:nth-of-type(2) {
+    display: none;
+  }
+
+  .bonus-image {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .jet1 {
+    width: 40%;
+    margin-right: 0;
+  }
+
+  .bonus-text h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .bonus-text p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+
+  .bonus-text small {
+    font-size: 0.6em;
+  }
+
+  .intro-review {
+    margin-top: 20px;
+  }
+
+  .media1 {
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+
+  .media2 {
+    font-size: 0.5em;
+  }
+
+  .media3 {
+    font-size: 0.55em;
+    margin-left: 10px;
+  }
+
+  .quote {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+
+  .intro-review img {
+    height: 9px;
+    width: 9px;
+  }
+
+  .quote button {
+    height: 30px;
+    width: 80px;
+    margin-top: 50px;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 100px 25px 0 50px;
+  }
+
+  #product-section > h1 {
+    font-size: 3.5em;
+    margin-bottom: 50px;
+  }
+
+  .car-container {
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .car-container > h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .car-info {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .car-image {
+    height: 100%;
+    width: auto;
+  }
+
+  .car-image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .car-info p {
+    font-size: 0.8em;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .car-info button {
+    font-size: 0.8em;
+    height: 80px;
+    width: 80px;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 10px 100px 10px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-line {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+
+  .footer-links a {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .other-links {
+    font-size: 0.8em;
+    width: 70%;
+  }
+
+  .other-links small {
+    margin-right: 15px;
+  }
+
+  .other-links small span {
+    font-size: 0.8em;
+  }
+
+  .footer-images {
+    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    padding-right: 30%;
+  }
+}
+
+/* Changes for intermediate screen sizes*/
+@media screen and (min-width: 765px) and (max-width: 1199px) {
+  /* Changes to Navigation */
+
+  #navigation-1 {
+    width: 80%;
+    margin-right: 0;
+    margin-left: 0;
+    margin: 50px 0% 0 10%;
+  }
+
+  /* Changes to Intro Section */
+
+  #intro-section {
+    padding: 150px 80px 20px 80px;
+  }
+
+  .banner-image {
+    height: 140px;
+  }
+
+  .banner-image img {
+    width: 70%;
+    left: 40%;
+    bottom: 180px;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 100px 30px 0 30px;
+  }
+
+  .car-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .car-image {
+    height: 280px;
+    width: 450px;
+  }
+
+  .car-image img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .car-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 5% 100px 5%;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+/* Changes for laptops and desktop screens*/
+@media screen and (min-width: 1200px) and (max-width: 2000px) {
+  /* Changes to Intro Section */
+
+  #intro-section {
+    padding: 180px 15% 20px 15%;
+  }
+
+  .banner-image {
+    height: 170px;
+  }
+
+  .banner-image img {
+    width: 70%;
+    bottom: 250px;
+    left: 40%;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 150px 15% 0px 15%;
+  }
+
+  .car-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .car-image {
+    height: auto;
+    width: 40%;
+  }
+
+  /* Changes to footer section */
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 }

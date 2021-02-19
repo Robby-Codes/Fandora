@@ -1,1533 +1,1598 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-    overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 ::selection {
-    color: white;
-    background-color: black;
+  color: white;
+  background-color: black;
 }
-
 
 /* Custom Scrollbar */
 
 ::-webkit-scrollbar {
-    width: 8px;
-    padding: 2.5px;
- }
+  width: 8px;
+  padding: 2.5px;
+}
 
 ::-webkit-scrollbar-track {
-    background: #f5f5f5;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-     background: #282828;
-     border-radius: 6px;
-     border: #282828 1px solid;
- }
-
+  background: #282828;
+  border-radius: 6px;
+  border: #282828 1px solid;
+}
 
 /* Cover Section */
 
 #cover {
-    height: 100vh;
-    width: 100%;
-    background-color: #f5f5f5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 999;
+  height: 100vh;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
 }
 
 #cover h1 {
-    font-size: 5em;
+  font-size: 5em;
 }
 
 .cover-content {
-    height: 50%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .car-image-1 {
-    height: 100px;
+  height: 100px;
 }
 
 .air {
-    width: 40%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
+  width: 40%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
 }
 
-.v1 {top: 20%; right: -100%;}
-.v2 {top: 40%; right: -100%; }
-.v3 {top: 65%; right: -100%; }
-.v4 {top: 75%; right: -100%;}
-
-.car-air-1, .car-air-2, .car-air-3 {
-    height: 1px;
-    width: 10px;
-    background-color: black;
-    position: relative;
+.v1 {
+  top: 20%;
+  right: -100%;
+}
+.v2 {
+  top: 40%;
+  right: -100%;
+}
+.v3 {
+  top: 65%;
+  right: -100%;
+}
+.v4 {
+  top: 75%;
+  right: -100%;
 }
 
-.car-air-1 {top: 5px; right: 20%;}
-.car-air-2 {top: 10px; right: 20%;}
-.car-air-3 {right: 20%;}
+.car-air-1,
+.car-air-2,
+.car-air-3 {
+  height: 1px;
+  width: 10px;
+  background-color: black;
+  position: relative;
+}
+
+.car-air-1 {
+  top: 5px;
+  right: 20%;
+}
+.car-air-2 {
+  top: 10px;
+  right: 20%;
+}
+.car-air-3 {
+  right: 20%;
+}
 
 .loading-bar {
-    width: 50%;
-    height: 20px;
-    border: 3px solid #282828;
-    border-radius: 100px;
-    position: absolute;
-    bottom: 40%;
+  width: 50%;
+  height: 20px;
+  border: 3px solid #282828;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 40%;
 }
 
 .bar {
-    width: 1%;
-    height: 100%;
-    background-color: #6e6e6e;
-    border-radius: 100px;
+  width: 1%;
+  height: 100%;
+  background-color: #6e6e6e;
+  border-radius: 100px;
 }
 
 /* Cover Loading Page Animations */
 
 @keyframes carShake {
-    0% {transform: translate(0px, 2px);}
-    25% {transform: translate(2px, 0);}
-    50% {transform: translate(0px, 2px);}
-    100% {transform: translate(2px, 0);}
+  0% {
+    transform: translate(0px, 2px);
+  }
+  25% {
+    transform: translate(2px, 0);
+  }
+  50% {
+    transform: translate(0px, 2px);
+  }
+  100% {
+    transform: translate(2px, 0);
+  }
 }
 
-.car-image-1 {animation: carShake 0.5s infinite;}
+.car-image-1 {
+  animation: carShake 0.5s infinite;
+}
 
-@keyframes carAir1 {to{transform: translate(-50px, 0);}}
-@keyframes carAir2 {to{transform: translate(-60px, 0);}}
-@keyframes carAir3 {to{transform: translate(-45px, 0);}}
+@keyframes carAir1 {
+  to {
+    transform: translate(-50px, 0);
+  }
+}
+@keyframes carAir2 {
+  to {
+    transform: translate(-60px, 0);
+  }
+}
+@keyframes carAir3 {
+  to {
+    transform: translate(-45px, 0);
+  }
+}
 
-.car-air-1 {animation: carAir1 0.5s 0.8s infinite;}
-.car-air-2 {animation: carAir2 0.5s 0.5s infinite;}
-.car-air-3 {animation: carAir3 0.5s 0.2s infinite;}
+.car-air-1 {
+  animation: carAir1 0.5s 0.8s infinite;
+}
+.car-air-2 {
+  animation: carAir2 0.5s 0.5s infinite;
+}
+.car-air-3 {
+  animation: carAir3 0.5s 0.2s infinite;
+}
 
-@keyframes air1 {to{transform: translate(-800%);}}
+@keyframes air1 {
+  to {
+    transform: translate(-800%);
+  }
+}
 
-.v1 {animation: air1 1s 0.5s infinite;}
-.v2 {animation: air1 1s 0.8s infinite;}
-.v3 {animation: air1 1s 1s infinite;}
-.v4 {animation: air1 1s 0.2s infinite;}
+.v1 {
+  animation: air1 1s 0.5s infinite;
+}
+.v2 {
+  animation: air1 1s 0.8s infinite;
+}
+.v3 {
+  animation: air1 1s 1s infinite;
+}
+.v4 {
+  animation: air1 1s 0.2s infinite;
+}
 
-
- /* Navigation */
+/* Navigation */
 
 #navigation {
-    width: 60%;
-    padding: 10px 0 10px 0;
-    border: 5px solid transparent;
-    border-radius: 50px;
-    margin-top: 30px;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 99;
+  width: 60%;
+  padding: 10px 0 10px 0;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  margin-top: 30px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 99;
 }
 
 .nav-btn-container {
-    display: flex;
+  display: flex;
 }
 
-.nav-buttons, .nav-home {
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: normal;
-    color: #6e6e6e;
-    margin-right: 25px;
+.nav-buttons,
+.nav-home {
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #6e6e6e;
+  margin-right: 25px;
 }
 
 .nav-home {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #navigation h1 {
-    height: 30px;
-    padding: 3px 8px 2px 8px;
-    border: 2px solid transparent;
-    border-radius: 100px;
-    background-color: transparent;
-    margin-bottom: 5px;
+  height: 30px;
+  padding: 3px 8px 2px 8px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  background-color: transparent;
+  margin-bottom: 5px;
 }
 
 #navigation a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .nav-buttons sub {
-    color: red;
+  color: red;
 }
 
 .nav-line {
-    height: 2px;
-    width: 90%;
-    background-color: #6e6e6e;
-    margin-bottom: 10px;
+  height: 2px;
+  width: 90%;
+  background-color: #6e6e6e;
+  margin-bottom: 10px;
 }
 
 .message {
-    color: #6e6e6e;
-    font-size: 0.9em;
+  color: #6e6e6e;
+  font-size: 0.9em;
 }
-
 
 /* Introduction Section */
 
 #intro-section {
-    height: auto;
-    width: 100%;
-    padding: 180px 100px 20px 100px;
+  height: auto;
+  width: 100%;
+  padding: 180px 100px 20px 100px;
 }
 
 .intro-content-container > h1 {
-    font-size: 3em;
-    font-weight: bolder;
-    color: #282828;
-    margin-bottom: 30px;
+  font-size: 3em;
+  font-weight: bolder;
+  color: #282828;
+  margin-bottom: 30px;
 }
 
 .intro-message {
-    color: #6e6e6e;
-    width: 50%;
+  color: #6e6e6e;
+  width: 50%;
 }
 
 .intro-message > p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .banner-btn {
-    color: #f5f5f5;
-    height: 100px;
-    width: 100px;
-    background-color: #282828;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    box-shadow: 5px 5px 5px black;
+  color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  background-color: #282828;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  box-shadow: 5px 5px 5px black;
 }
 
 .banner-btn h1 {
-    font-size: 0.8em;
-    padding-bottom: 10px;
+  font-size: 0.8em;
+  padding-bottom: 10px;
 }
 
 .banner-btn p {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 .intro-message > div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .btn-extra {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-extra h1 {
-    color: #282828;
-    font-size: 1em;
+  color: #282828;
+  font-size: 1em;
 }
 
 .btn-extra p {
-    color: #6e6e6e;
-    font-size: 0.8em;
+  color: #6e6e6e;
+  font-size: 0.8em;
 }
 
 .banner-image {
-    height: 200px;
+  height: 200px;
 }
 
 .banner-image img {
-    width: 85%;
-    position: relative;
-    left: 33%;
-    bottom: 180px; 
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+  width: 85%;
+  position: relative;
+  left: 33%;
+  bottom: 180px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .intro-bonus {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
 .bonus-image {
-    width: 50%;
+  width: 50%;
 }
 
 .bonus-image {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.jet1, .jet2 {
-    width: 40%;
-    margin-right: 30px;
+.jet1,
+.jet2 {
+  width: 40%;
+  margin-right: 30px;
 }
 
 .bonus-text {
-    width: 50%;
-}  
+  width: 50%;
+}
 
 .bonus-text h1 {
-    color: #282828;
-    margin-bottom: 20px;
+  color: #282828;
+  margin-bottom: 20px;
 }
 
 .bonus-text p {
-    color: #6e6e6e;
-    margin-bottom: 20px;
+  color: #6e6e6e;
+  margin-bottom: 20px;
 }
 
 .bonus-text small {
-    color: #6e6e6e;
+  color: #6e6e6e;
 }
 
 .intro-review {
-    width: 100%;
-    margin-top: 100px;
+  width: 100%;
+  margin-top: 100px;
 }
 
 .media {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.media1, .media2, .media3 {
-    width: 33.33%;
-    text-align: center;
+.media1,
+.media2,
+.media3 {
+  width: 33.33%;
+  text-align: center;
 }
 
 .media1 {
-    font-weight: bolder;
-    font-size: 1.8em;
+  font-weight: bolder;
+  font-size: 1.8em;
 }
 
 .media2 {
-    font-size: 0.7em;
+  font-size: 0.7em;
 }
 
 .media3 {
-    font-size: 0.9em;
+  font-size: 0.9em;
 }
 
 .quote {
-    color: #6e6e6e;
-    font-size: 0.9em;
-    text-align: center;
-    margin-top: 15px;
+  color: #6e6e6e;
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .intro-review img {
-    height: 20px;
-    width: 20px;
+  height: 20px;
+  width: 20px;
 }
 
 .quote button {
-    cursor: pointer;
-    height: 40px;
-    width: 100px;
-    background-color: #282828;
-    border: 2px solid #282828;
-    margin-top: 50px;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  background-color: #282828;
+  border: 2px solid #282828;
+  margin-top: 50px;
 }
-
 
 /* Product Section */
 
 #product-section {
-    width: 100%;
-    padding: 150px 100px 0 100px;
+  width: 100%;
+  padding: 150px 100px 0 100px;
 }
 
 #product-section > h1 {
-    color: #282828;
-    font-size: 5em;
-    text-decoration: underline;
+  color: #282828;
+  font-size: 5em;
+  text-decoration: underline;
 }
 
 .car-container {
-    height: 450px;
-    width: 100%;
-    margin-bottom: 50px;
+  height: 450px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .car-container > h1 {
-    font-size: 3em;
-    color: #282828;
-    margin-bottom: 30px;
+  font-size: 3em;
+  color: #282828;
+  margin-bottom: 30px;
 }
 
 .car-content {
-    width: 100%;
-    display: flex;
+  width: 100%;
+  display: flex;
 }
 
-.car-info, .car-image {
-    width: 50%;
+.car-info,
+.car-image {
+  width: 50%;
 }
 
 .car-info p {
-    color: #979797;
-    width: 70%;
-    margin-bottom: 15px;
+  color: #979797;
+  width: 70%;
+  margin-bottom: 15px;
 }
 
 .car-info button {
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
-    color: #f5f5f5;
-    height: 100px;
-    width: 100px;
-    background-color: #282828;
-    border: 2px solid #282828;
-    border-radius: 100%;
-    margin-right: 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  color: #f5f5f5;
+  height: 100px;
+  width: 100px;
+  background-color: #282828;
+  border: 2px solid #282828;
+  border-radius: 100%;
+  margin-right: 20px;
 }
 
 .car-image img {
-    width: 100%;
-    background-color: #282828;
-    border: 5px solid #282828;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px black;
+  width: 100%;
+  background-color: #282828;
+  border: 5px solid #282828;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px black;
 }
 
 .car-pic {
-    opacity: 0;
-    transform: translate(50px);
+  opacity: 0;
+  transform: translate(50px);
 }
 
 a {
-    color: #f5f5f5;
-    text-decoration: none;
+  color: #f5f5f5;
+  text-decoration: none;
 }
-
 
 /* Footer Section */
 
 footer {
-    padding: 50px 15% 100px 15%;
+  padding: 50px 15% 100px 15%;
 }
 
 .footer-container {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .footer-line {
-    height: 2px;
-    width: 100%;
-    background-color: #6e6e6e;
-    margin-bottom: 30px;
+  height: 2px;
+  width: 100%;
+  background-color: #6e6e6e;
+  margin-bottom: 30px;
 }
 
 .footer-links {
-    display: flex;
-    text-transform: uppercase;
-    margin-bottom: 50px;
+  display: flex;
+  text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 .footer-links a {
-    cursor: pointer;
-    margin-right: 20px;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .other-links {
-    width: 60%;
-    margin: 0 auto 30px auto;
-    display: flex;
-    justify-content: space-between;
+  width: 60%;
+  margin: 0 auto 30px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .other-links small {
-    color: #979797;
+  color: #979797;
 }
 
 .other-links small span {
-    color: #6e6e6e;
+  color: #6e6e6e;
 }
 
 footer a {
-    color: #6e6e6e;
-    cursor: pointer;
+  color: #6e6e6e;
+  cursor: pointer;
 }
 
 .footer-images {
-    width: 10%;
-    margin: 0 auto 0 auto;
-    display: flex;
-    padding-right: 18%;
+  width: 10%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  padding-right: 18%;
 }
 
 .footer-images img {
-    height: auto;
-    width: 50px;
-    margin-right: 30px;
+  height: auto;
+  width: 50px;
+  margin-right: 30px;
 }
-
 
 /* Button Animations */
 
 @keyframes btnHover {
-    from {
-        color: #f5f5f5;
-        background-color: #282828;
-        box-shadow: none;
-    }
-    to {
-        color: #282828;
-        background-color: #f5f5f5;
-        box-shadow: 5px 5px 5px #282828;
-    }
+  from {
+    color: #f5f5f5;
+    background-color: #282828;
+    box-shadow: none;
+  }
+  to {
+    color: #282828;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 5px #282828;
+  }
 }
 
 @keyframes btnHoverOff {
-    from {
-        color: #282828;
-        background-color: #f5f5f5;
-        box-shadow: 5px 5px 5px #282828;
-    }
-    to {
-        color: #f5f5f5;
-        background-color: #282828;
-        box-shadow: none;
-    }
+  from {
+    color: #282828;
+    background-color: #f5f5f5;
+    box-shadow: 5px 5px 5px #282828;
+  }
+  to {
+    color: #f5f5f5;
+    background-color: #282828;
+    box-shadow: none;
+  }
 }
 
 button {
-    outline: none;
-    animation: btnHoverOff 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  outline: none;
+  animation: btnHoverOff 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 button:hover {
-    animation: btnHover 0.5s 1;
-    -webkit-animation-fill-mode: forwards;
+  animation: btnHover 0.5s 1;
+  -webkit-animation-fill-mode: forwards;
 }
 
 #intro-section button:hover img {
-    content: url("../images/down-arrow2.png");
+  content: url("../images/down-arrow2.png");
 }
-
 
 /*Navigation Bar Link Animations */
 
 @keyframes linkHover {
-    from {
-    }
-    to {
-        color: #282828;
-        font-weight: bold;
-        border: 2px solid #282828;
-    }
+  from {
+  }
+  to {
+    color: #282828;
+    font-weight: bold;
+    border: 2px solid #282828;
+  }
 }
 
 #navigation h1:hover {
-    animation: linkHover 0.5s;
-    -webkit-animation-fill-mode: forwards;
+  animation: linkHover 0.5s;
+  -webkit-animation-fill-mode: forwards;
 }
-
 
 /* Changing Sizes for Phone Users (Portrait View) */
 @media screen and (min-width: 250px) and (max-width: 500px) {
-    
-    /* Changes to Cover Section */
+  /* Changes to Cover Section */
 
-    #cover {
-        height: 100%;
-    }
+  #cover {
+    height: 100%;
+  }
 
-    #cover h1 {
-        font-size: 3em;
-    }
-    
-    .car-image-1 {
-        height: 90px;
-    }
-    
-    .air {
-        width: 30%;
-    }
-            
-    .car-air-1 {right: 30%;}
-    .car-air-2 {right: 30%;}
-    .car-air-3 {right: 30%;}
-    
-    .loading-bar {
-        width: 80%;
-        height: 15px;
-        bottom: 37%;
-    }
-    
-    /* Changes to Navigation */
+  #cover h1 {
+    font-size: 3em;
+  }
 
-    #navigation {
-        position: static;
-        width: 90%;
-        margin: 20px auto 0 auto;
-        padding: 5px;
-    }
+  .car-image-1 {
+    height: 90px;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 0.6em;
-        margin-right: 0px;
-    }
-                
-    .nav-line {
-        height: 2px;
-        width: 100%;
-        background-color: #6e6e6e;
-        margin-bottom: 5px;
-    }
-    
-    .message {
-        font-size: 0.7em;
-        width: 90%;
-        text-align: center;
-    }
-    
-    /* Changes to Introduction Section */
+  .air {
+    width: 30%;
+  }
 
-    #intro-section {
-        padding: 20px 20px 20px 20px;
-    }
-    
-    .intro-content-container > h1 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-    
-    .intro-message {
-        font-size: 0.75em;
-        width: 50%;
-    }
-    
-    .intro-message > p {
-        width: 90%;
-        margin-bottom: 10px;
-    }
-    
-    .banner-btn {
-        height: 50px;
-        width: 50px;
-        margin-right: 15px;
-    }
-    
-    .banner-btn h1 {
-        font-size: 0.6em;
-        padding-bottom: 2px;
-    }
-    
-    .banner-btn p {
-        font-size: 0.8em;
-        text-align: center;
-    }
-            
-    .btn-extra h1 {
-        font-size: 0.9em;
-    }
-        
-    .banner-image {
-        height: 30px;
-    }
-    
-    .banner-image img {
-        width: 70%;
-        left: 42%;
-        bottom: 130px; 
-    }
-        
-    .intro-bonus img:nth-of-type(2) {
-        display: none;
-    }
+  .car-air-1 {
+    right: 30%;
+  }
+  .car-air-2 {
+    right: 30%;
+  }
+  .car-air-3 {
+    right: 30%;
+  }
 
-    .bonus-image {
-        justify-content: center;
-        padding: 15px;
-    }
-    
-    .jet1 {
-        width: 100%;
-        margin-right: 0;
-    }
-        
-    .bonus-text h1 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-    
-    .bonus-text p {
-        font-size: 0.8em;
-        margin-bottom: 5px;
-    }
-    
-    .bonus-text small {
-        font-size: 0.6em;
-    }
-    
-    .intro-review {
-        margin-top: 20px;
-    }
-    
-    .media1 {
-        font-size: 0.7em;
-        margin-right: 10px;
-    }
-    
-    .media2 {
-        font-size: 0.5em;
-    }
-    
-    .media3 {
-        font-size: 0.55em;
-        margin-left: 10px;
-    }
-    
-    .quote {
-        font-size: 0.6em;
-        margin-top: 10px;
-    }
-    
-    .intro-review img {
-        height: 9px;
-        width: 9px;
-    }
-    
-    .quote button {
-        height: 30px;
-        width: 80px;
-        margin-top: 50px;
-    }
-    
-    /* Changes to Product Section */
+  .loading-bar {
+    width: 80%;
+    height: 15px;
+    bottom: 37%;
+  }
 
-    #product-section {
-        padding: 100px 20px 0 50px;
-    }
-    
-    #product-section > h1 {
-        font-size: 2em;
-        margin-bottom: 50px;
-    }
-    
-    .car-container {
-        height: 80vh;
-        margin-bottom: 100px;
-    }
-    
-    .car-container > h1 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .car-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .car-info {
-        width: 100%;
-    }
+  /* Changes to Navigation */
 
-    .car-image {
-        width: 100%;
+  #navigation {
+    position: static;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+  }
+
+  .nav-buttons,
+  .nav-home {
+    font-size: 0.6em;
+    margin-right: 0px;
+  }
+
+  .nav-line {
+    height: 2px;
+    width: 100%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-size: 0.7em;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Changes to Introduction Section */
+
+  #intro-section {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .intro-content-container > h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .intro-message {
+    font-size: 0.75em;
+    width: 50%;
+  }
+
+  .intro-message > p {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .banner-btn {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+  }
+
+  .banner-btn h1 {
+    font-size: 0.6em;
+    padding-bottom: 2px;
+  }
+
+  .banner-btn p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+
+  .btn-extra h1 {
+    font-size: 0.9em;
+  }
+
+  .banner-image {
+    height: 30px;
+  }
+
+  .banner-image img {
+    width: 70%;
+    left: 42%;
+    bottom: 130px;
+  }
+
+  .intro-bonus img:nth-of-type(2) {
+    display: none;
+  }
+
+  .bonus-image {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .jet1 {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .bonus-text h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .bonus-text p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+  }
+
+  .bonus-text small {
+    font-size: 0.6em;
+  }
+
+  .intro-review {
+    margin-top: 20px;
+  }
+
+  .media1 {
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+
+  .media2 {
+    font-size: 0.5em;
+  }
+
+  .media3 {
+    font-size: 0.55em;
+    margin-left: 10px;
+  }
+
+  .quote {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+
+  .intro-review img {
+    height: 9px;
+    width: 9px;
+  }
+
+  .quote button {
+    height: 30px;
+    width: 80px;
+    margin-top: 50px;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 100px 20px 0 50px;
+  }
+
+  #product-section > h1 {
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+
+  .car-container {
+    height: 80vh;
+    margin-bottom: 100px;
+  }
+
+  .car-container > h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .car-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .car-info {
+    width: 100%;
+  }
+
+  .car-image {
+    width: 100%;
+  }
+
+  .car-info p {
+    font-size: 0.8em;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .car-info button {
+    font-size: 0.8em;
+    height: 80px;
+    width: 80px;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 0 100px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-line {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .footer-links a {
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .other-links {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  .other-links small {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  .other-links small span {
+    font-size: 0.8em;
+  }
+
+  .footer-images {
+    margin-top: 50px;
+    padding-right: 50%;
+  }
+
+  /* Changes to Button Animations */
+
+  @keyframes btnHover {
+    to {
     }
+  }
 
-    .car-info p {
-        font-size: 0.8em;
-        width: 100%;
-        margin-bottom: 15px;
-        text-align: center;
+  @keyframes btnHoverOff {
+    to {
     }
-    
-    .button-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
+  }
+
+  button {
+    outline: none;
+    animation: btnHoverOff 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  button:hover {
+    animation: btnHover 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  #intro-section button:active img {
+    content: url("../images/down-arrow.png");
+  }
+
+  /* Changes to Navigation Bar Link Animations */
+
+  @keyframes linkHover {
+    from {
     }
-
-    .car-info button {
-        font-size: 0.8em;
-        height: 80px;
-        width: 80px;
+    to {
     }
+  }
 
-    /* Changes to Footer Section */
-
-    
-    footer {
-        padding: 50px 0 100px 0;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-line {
-        margin-bottom: 30px;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-
-    .footer-links a {
-        font-size: 1em;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .other-links {
-        font-size: 0.8em;
-        width: 100%;
-    }
-
-    .other-links small {
-        margin-left: 10px;
-        margin-right: 15px;
-    }
-
-    .other-links small span {
-        font-size: 0.8em;
-    }
-
-    .footer-images {
-        margin-top: 50px;
-        padding-right: 50%;
-    }
-
-    /* Changes to Button Animations */
-
-    @keyframes btnHover {
-        to {
-        }
-    }
-
-    @keyframes btnHoverOff {
-        to {
-        }
-    }
-
-    button {
-        outline: none;
-        animation: btnHoverOff 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    button:hover {
-        animation: btnHover 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    #intro-section button:active img {
-        content: url("../images/down-arrow.png");
-    }
-
-
-    /* Changes to Navigation Bar Link Animations */
-
-    @keyframes linkHover {
-        from {
-        }
-        to {
-        }
-    }
-
-    #navigation h1:hover {
-        animation: linkHover 0.5s;
-        -webkit-animation-fill-mode: forwards;
-    }
-            
+  #navigation h1:hover {
+    animation: linkHover 0.5s;
+    -webkit-animation-fill-mode: forwards;
+  }
 }
-
 
 /* Changing sizes for phone users (Landscape View) */
 @media screen and (min-width: 501px) and (max-width: 840px) {
-    
-    /* Changes to Cover Section */
+  /* Changes to Cover Section */
 
-    #cover {
-        height: 100%;
-    }
+  #cover {
+    height: 100%;
+  }
 
-    #cover h1 {
-        font-size: 4em;
-    }
-    
-    .car-image-1 {
-        height: 100px;
-    }
-    
-    .air {
-        width: 80%;
-    }
-    
-    .car-air-1 {right: 34%;}
-    .car-air-2 {right: 34%;}
-    .car-air-3 {right: 34%;}
+  #cover h1 {
+    font-size: 4em;
+  }
 
-    .loading-bar {
-        bottom: 19%;
-    }
-    
-    /* Changes to Navigation */
+  .car-image-1 {
+    height: 100px;
+  }
 
-    #navigation {
-        position: static;
-        width: 90%;
-        margin: 20px auto 0 auto;
-        padding: 5px;
-    }
+  .air {
+    width: 80%;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 1em;
-        margin-right: 5px;
-    }
-                
-    .nav-line {
-        height: 2px;
-        width: 90%;
-        background-color: #6e6e6e;
-        margin-bottom: 5px;
-    }
-    
-    .message {
-        font-size: 0.75em;
-        width: 80%;
-        text-align: center;
-    }
-    
-    /* Changes to Introduction Section */
+  .car-air-1 {
+    right: 34%;
+  }
+  .car-air-2 {
+    right: 34%;
+  }
+  .car-air-3 {
+    right: 34%;
+  }
 
-    #intro-section {
-        padding: 20px 10px 10px 30px;
-    }
-    
-    .intro-content-container > h1 {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-    }
-    
-    .intro-message {
-        font-size: 0.8em;
-        width: 45%;
-    }
-    
-    .intro-message > p {
-        margin-bottom: 10px;
-    }
-    
-    .banner-btn {
-        height: 60px;
-        width: 60px;
-        margin-right: 15px;
-    }
-    
-    .banner-btn h1 {
-        font-size: 0.65em;
-        padding-bottom: 2px;
-    }
-    
-    .banner-btn p {
-        font-size: 0.85em;
-        text-align: center;
-    }
-            
-    .btn-extra h1 {
-        font-size: 1em;
-    }
+  .loading-bar {
+    bottom: 19%;
+  }
 
-    .banner-image {
-        height: 50px;
-    }
-    
-    .banner-image img {
-        width: 60%;
-        left: 42%;
-        bottom: 160px; 
-    }
-        
-    .intro-bonus img:nth-of-type(2) {
-        display: none;
-    }
+  /* Changes to Navigation */
 
-    .bonus-image {
-        justify-content: center;
-        padding: 15px;
-    }
-    
-    .jet1 {
-        width: 40%;
-        margin-right: 0;
-    }
-        
-    .bonus-text h1 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-    }
-    
-    .bonus-text p {
-        font-size: 0.8em;
-        margin-bottom: 5px;
-        width: 95%;
-    }
-    
-    .bonus-text small {
-        font-size: 0.6em;
-    }
-    
-    .intro-review {
-        margin-top: 20px;
-    }
-    
-    .media1 {
-        font-size: 0.7em;
-        margin-right: 10px;
-    }
-    
-    .media2 {
-        font-size: 0.5em;
-    }
-    
-    .media3 {
-        font-size: 0.55em;
-        margin-left: 10px;
-    }
-    
-    .quote {
-        font-size: 0.6em;
-        margin-top: 10px;
-    }
-    
-    .intro-review img {
-        height: 9px;
-        width: 9px;
-    }
-    
-    .quote button {
-        height: 30px;
-        width: 80px;
-        margin-top: 50px;
-    }
-    
-    /* Changes to Product Section */
+  #navigation {
+    position: static;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+  }
 
-    #product-section {
-        padding: 100px 25px 0 50px;
-    }
-    
-    #product-section > h1 {
-        font-size: 3.5em;
-        margin-bottom: 50px;
-    }
-    
-    .car-container {
-        height: auto;
-        margin-bottom: 100px;
-    }
-    
-    .car-container > h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-    
-    .car-info {
-        width: 50%;
-        margin-right: 20px;
-    }
+  .nav-buttons,
+  .nav-home {
+    font-size: 1em;
+    margin-right: 5px;
+  }
 
-    .car-image {
-        width: 45%;
+  .nav-line {
+    height: 2px;
+    width: 90%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-size: 0.75em;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* Changes to Introduction Section */
+
+  #intro-section {
+    padding: 20px 10px 10px 30px;
+  }
+
+  .intro-content-container > h1 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .intro-message {
+    font-size: 0.8em;
+    width: 45%;
+  }
+
+  .intro-message > p {
+    margin-bottom: 10px;
+  }
+
+  .banner-btn {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+  }
+
+  .banner-btn h1 {
+    font-size: 0.65em;
+    padding-bottom: 2px;
+  }
+
+  .banner-btn p {
+    font-size: 0.85em;
+    text-align: center;
+  }
+
+  .btn-extra h1 {
+    font-size: 1em;
+  }
+
+  .banner-image {
+    height: 50px;
+  }
+
+  .banner-image img {
+    width: 60%;
+    left: 42%;
+    bottom: 160px;
+  }
+
+  .intro-bonus img:nth-of-type(2) {
+    display: none;
+  }
+
+  .bonus-image {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .jet1 {
+    width: 40%;
+    margin-right: 0;
+  }
+
+  .bonus-text h1 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .bonus-text p {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+
+  .bonus-text small {
+    font-size: 0.6em;
+  }
+
+  .intro-review {
+    margin-top: 20px;
+  }
+
+  .media1 {
+    font-size: 0.7em;
+    margin-right: 10px;
+  }
+
+  .media2 {
+    font-size: 0.5em;
+  }
+
+  .media3 {
+    font-size: 0.55em;
+    margin-left: 10px;
+  }
+
+  .quote {
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+
+  .intro-review img {
+    height: 9px;
+    width: 9px;
+  }
+
+  .quote button {
+    height: 30px;
+    width: 80px;
+    margin-top: 50px;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 100px 25px 0 50px;
+  }
+
+  #product-section > h1 {
+    font-size: 3.5em;
+    margin-bottom: 50px;
+  }
+
+  .car-container {
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .car-container > h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .car-info {
+    width: 50%;
+    margin-right: 20px;
+  }
+
+  .car-image {
+    width: 45%;
+  }
+
+  .car-info p {
+    font-size: 0.8em;
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .car-info button {
+    font-size: 0.8em;
+    height: 80px;
+    width: 80px;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 0 100px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-line {
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+
+  .footer-links a {
+    font-size: 0.7em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .other-links {
+    font-size: 0.8em;
+    width: 70%;
+  }
+
+  .other-links small {
+    margin-right: 15px;
+  }
+
+  .other-links small span {
+    font-size: 0.8em;
+  }
+
+  .footer-images {
+    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    padding-right: 30%;
+  }
+
+  /* Changes to Button Animations */
+
+  @keyframes btnHover {
+    to {
     }
+  }
 
-    .car-info p {
-        font-size: 0.8em;
-        width: 100%;
-        margin-bottom: 15px;
-        text-align: center;
+  @keyframes btnHoverOff {
+    to {
     }
-    
-    .button-container {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
+  }
+
+  button {
+    outline: none;
+    animation: btnHoverOff 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  button:hover {
+    animation: btnHover 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  #intro-section button:active img {
+    content: url("../images/down-arrow.png");
+  }
+
+  /* Changes to Navigation Bar Link Animations */
+
+  @keyframes linkHover {
+    from {
     }
-
-    .car-info button {
-        font-size: 0.8em;
-        height: 80px;
-        width: 80px;
+    to {
     }
+  }
 
-    /* Changes to Footer Section */
-
-    footer {
-        padding: 50px 0 100px 0;
-    }
-
-    .footer-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .footer-line {
-        margin-bottom: 30px;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 30px;
-        margin-left: 20px;
-    }
-
-    .footer-links a {
-        font-size: 0.7em;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .other-links {
-        font-size: 0.8em;
-        width: 70%;
-    }
-
-    .other-links small {
-        margin-right: 15px;
-    }
-
-    .other-links small span {
-        font-size: 0.8em;
-    }
-
-    .footer-images {
-        margin-top: 50px;
-        margin: 50px auto 0 auto;
-        padding-right: 30%;
-    }
-
-    /* Changes to Button Animations */
-
-    @keyframes btnHover {
-        to {
-        }
-    }
-
-    @keyframes btnHoverOff {
-        to {
-        }
-    }
-
-    button {
-        outline: none;
-        animation: btnHoverOff 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    button:hover {
-        animation: btnHover 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    #intro-section button:active img {
-        content: url("../images/down-arrow.png");
-    }
-
-
-    /* Changes to Navigation Bar Link Animations */
-
-    @keyframes linkHover {
-        from {
-        }
-        to {
-        }
-    }
-
-    #navigation h1:hover {
-        animation: linkHover 0.5s;
-        -webkit-animation-fill-mode: forwards;
-    }
+  #navigation h1:hover {
+    animation: linkHover 0.5s;
+    -webkit-animation-fill-mode: forwards;
+  }
 }
-
 
 /* Changing sizes for Laptop and Desktop Users */
 @media screen and (min-width: 1200px) and (max-width: 2000px) {
+  /* Changes to Cover Section */
 
-    /* Changes to Cover Section */
+  #cover {
+    height: 100%;
+  }
 
-    #cover {
-        height: 100%;
-    }
+  #cover h1 {
+    font-size: 8em;
+  }
 
-    #cover h1 {
-        font-size: 8em;
-    }
-    
-    .car-image-1 {
-        height: 200px;
-    }
-    
-    .air {
-        width: 80%;
-    }
-    
-    .car-air-1 {right: 25%;}
-    .car-air-2 {right: 25%;}
-    .car-air-3 {right: 25%;}
+  .car-image-1 {
+    height: 200px;
+  }
 
-    .loading-bar {
-        bottom: 19%;
-        overflow: hidden;
-    }
-    
-    /* Changes to Navigation */
+  .air {
+    width: 80%;
+  }
 
-    #navigation {
-        position: fixed;
-        width: 90%;
-        margin: 20px auto 0 auto;
-        padding: 5px;
-    }
+  .car-air-1 {
+    right: 25%;
+  }
+  .car-air-2 {
+    right: 25%;
+  }
+  .car-air-3 {
+    right: 25%;
+  }
 
-    .nav-buttons, .nav-home {
-        font-size: 1em;
-        margin-right: 30px;
-    }
-                
-    .nav-line {
-        height: 2px;
-        width: 90%;
-        background-color: #6e6e6e;
-        margin-bottom: 5px;
-    }
-    
-    .message {
-        font-size: 0.8em;
-        width: 80%;
-        text-align: center;
-    }
-    
-    /* Changes to Introduction Section */
+  .loading-bar {
+    bottom: 19%;
+    overflow: hidden;
+  }
 
-    #intro-section {
-        padding: 150px 15% 10px 15%;
-    }
-    
-    .intro-content-container > h1 {
-        font-size: 4.5em;
-        margin-bottom: 20px;
-    }
-    
-    .intro-message {
-        font-size: 1em;
-        width: 50%;
-    }
-    
-    .intro-message > p {
-        margin-bottom: 30px;
-    }
-    
-    .banner-btn {
-        height: 120px;
-        width: 120px;
-        margin-right: 20px;
-    }
-    
-    .banner-btn h1 {
-        font-size: 1em;
-        padding-bottom: 10px;
-    }
-    
-    .banner-btn p {
-        font-size: 1em;
-        text-align: center;
-    }
-            
-    .btn-extra h1 {
-        font-size: 1em;
+  /* Changes to Navigation */
 
-    }
-    
-    .banner-image {
-        height: 200px;
-    }
-    
-    .banner-image img {
-        width: 76%;
-        left: 33%;
-        bottom: 260px; 
-    }
-        
-    .intro-bonus img:nth-of-type(2) {
-        display: static;
-    }
+  #navigation {
+    position: fixed;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+  }
 
-    .bonus-image {
-        justify-content: center;
-        padding: 15px;
-    }
-    
-    .jet1 {
-        width: 40%;
-        margin-right: 20px;
-    }
+  .nav-buttons,
+  .nav-home {
+    font-size: 1em;
+    margin-right: 30px;
+  }
 
-    .jet2 {
-        width: 40%;
-    }
-        
-    .bonus-text h1 {
-        font-size: 4.5em;
-        margin-bottom: 30px;
-    }
-    
-    .bonus-text p {
-        font-size: 1em;
-        width: 70%;
-        margin-bottom: 30px;
-    }
-    
-    .bonus-text small {
-        font-size: 0.8em;
-    }
-    
-    .intro-review {
-        margin-top: 100px;
-    }
-    
-    .media1 {
-        font-size: 2.5em;
-    }
-    
-    .media2 {
-        font-size: 1.5em;
-    }
-    
-    .media3 {
-        font-size: 1.5em;
-    }
-    
-    .quote {
-        font-size: 1em;
-        margin-top: 50px;
-    }
-    
-    .intro-review img {
-        height: 25px;
-        width: 25px;
-    }
-    
-    .quote button {
-        height: 30px;
-        width: 80px;
-        margin-top: 50px;
-    }
-    
-    /* Changes to Product Section */
+  .nav-line {
+    height: 2px;
+    width: 90%;
+    background-color: #6e6e6e;
+    margin-bottom: 5px;
+  }
 
-    #product-section {
-        padding: 120px 15% 0 15%;
-    }
-    
-    #product-section > h1 {
-        display: none;
-    }
-    
-    .car-container {
-        height: auto;
-        margin-bottom: 200px;
-    }
-    
-    .car-container > h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    
-    .car-info {
-        width: 50%;
-        margin-right: 50px;
-    }
+  .message {
+    font-size: 0.8em;
+    width: 80%;
+    text-align: center;
+  }
 
-    .car-image {
-        width: 45%;
+  /* Changes to Introduction Section */
+
+  #intro-section {
+    padding: 150px 15% 10px 15%;
+  }
+
+  .intro-content-container > h1 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+  }
+
+  .intro-message {
+    font-size: 1em;
+    width: 50%;
+  }
+
+  .intro-message > p {
+    margin-bottom: 30px;
+  }
+
+  .banner-btn {
+    height: 120px;
+    width: 120px;
+    margin-right: 20px;
+  }
+
+  .banner-btn h1 {
+    font-size: 1em;
+    padding-bottom: 10px;
+  }
+
+  .banner-btn p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .btn-extra h1 {
+    font-size: 1em;
+  }
+
+  .banner-image {
+    height: 200px;
+  }
+
+  .banner-image img {
+    width: 76%;
+    left: 33%;
+    bottom: 260px;
+  }
+
+  .intro-bonus img:nth-of-type(2) {
+    display: static;
+  }
+
+  .bonus-image {
+    justify-content: center;
+    padding: 15px;
+  }
+
+  .jet1 {
+    width: 40%;
+    margin-right: 20px;
+  }
+
+  .jet2 {
+    width: 40%;
+  }
+
+  .bonus-text h1 {
+    font-size: 4.5em;
+    margin-bottom: 30px;
+  }
+
+  .bonus-text p {
+    font-size: 1em;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+
+  .bonus-text small {
+    font-size: 0.8em;
+  }
+
+  .intro-review {
+    margin-top: 100px;
+  }
+
+  .media1 {
+    font-size: 2.5em;
+  }
+
+  .media2 {
+    font-size: 1.5em;
+  }
+
+  .media3 {
+    font-size: 1.5em;
+  }
+
+  .quote {
+    font-size: 1em;
+    margin-top: 50px;
+  }
+
+  .intro-review img {
+    height: 25px;
+    width: 25px;
+  }
+
+  .quote button {
+    height: 30px;
+    width: 80px;
+    margin-top: 50px;
+  }
+
+  /* Changes to Product Section */
+
+  #product-section {
+    padding: 120px 15% 0 15%;
+  }
+
+  #product-section > h1 {
+    display: none;
+  }
+
+  .car-container {
+    height: auto;
+    margin-bottom: 200px;
+  }
+
+  .car-container > h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .car-info {
+    width: 50%;
+    margin-right: 50px;
+  }
+
+  .car-image {
+    width: 45%;
+  }
+
+  .car-info p {
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+  }
+
+  .car-info button {
+    font-size: 1em;
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+  }
+
+  /* Changes to Footer Section */
+
+  footer {
+    padding: 50px 0 100px 0;
+    width: 80%;
+  }
+
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-line {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer-links a {
+    font-size: 1em;
+    margin-right: 50px;
+    text-align: center;
+  }
+
+  .other-links {
+    font-size: 1em;
+    width: 40%;
+  }
+
+  .other-links small {
+    margin-right: 15px;
+  }
+
+  .other-links small span {
+    font-size: 1em;
+  }
+
+  .footer-images {
+    margin-top: 50px;
+    margin: 50px auto 0 auto;
+    padding-right: 0%;
+  }
+
+  /* Button Animations */
+
+  @keyframes btnHover {
+    from {
+      color: #f5f5f5;
+      background-color: #282828;
+      box-shadow: none;
     }
-
-    .car-info p {
-        font-size: 1em;
-        width: 100%;
-        margin-bottom: 20px;
-        text-align: center;
+    to {
+      color: #282828;
+      background-color: #f5f5f5;
+      box-shadow: 5px 5px 5px #282828;
     }
-    
-    .button-container {
-        width: 100%;
-        display: flex;
-        justify-content: start;
-        margin-bottom: 10px;
+  }
+
+  @keyframes btnHoverOff {
+    from {
+      color: #282828;
+      background-color: #f5f5f5;
+      box-shadow: 5px 5px 5px #282828;
     }
-
-    .car-info button {
-        font-size: 1em;
-        height: 100px;
-        width: 100px;
-        margin-right: 50px;
+    to {
+      color: #f5f5f5;
+      background-color: #282828;
+      box-shadow: none;
     }
+  }
 
-    /* Changes to Footer Section */
+  button {
+    outline: none;
+    animation: btnHoverOff 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
 
-    
-    footer {
-        padding: 50px 0 100px 0;
-        width: 80%;
+  button:hover {
+    animation: btnHover 0.5s 1;
+    -webkit-animation-fill-mode: forwards;
+  }
+
+  #intro-section button:hover img {
+    content: url("../images/down-arrow2.png");
+  }
+
+  /*Navigation Bar Link Animations */
+
+  @keyframes linkHover {
+    from {
     }
-
-    .footer-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    to {
+      color: #282828;
+      font-weight: bold;
+      border: 2px solid #282828;
     }
+  }
 
-    .footer-line {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer-links a {
-        font-size: 1em;
-        margin-right: 50px;
-        text-align: center;
-    }
-
-    .other-links {
-        font-size: 1em;
-        width: 40%;
-    }
-
-    .other-links small {
-        margin-right: 15px;
-    }
-
-    .other-links small span {
-        font-size: 1em;
-    }
-
-    .footer-images {
-        margin-top: 50px;
-        margin: 50px auto 0 auto;
-        padding-right: 0%;
-    }
-
-
-    /* Button Animations */
-
-    @keyframes btnHover {
-        from {
-            color: #f5f5f5;
-            background-color: #282828;
-            box-shadow: none;
-        }
-        to {
-            color: #282828;
-            background-color: #f5f5f5;
-            box-shadow: 5px 5px 5px #282828;
-        }
-    }
-
-    @keyframes btnHoverOff {
-        from {
-            color: #282828;
-            background-color: #f5f5f5;
-            box-shadow: 5px 5px 5px #282828;
-        }
-        to {
-            color: #f5f5f5;
-            background-color: #282828;
-            box-shadow: none;
-        }
-    }
-
-    button {
-        outline: none;
-        animation: btnHoverOff 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    button:hover {
-        animation: btnHover 0.5s 1;
-        -webkit-animation-fill-mode: forwards;
-    }
-
-    #intro-section button:hover img {
-        content: url("../images/down-arrow2.png");
-    }
-
-
-    /*Navigation Bar Link Animations */
-
-    @keyframes linkHover {
-        from {
-        }
-        to {
-            color: #282828;
-            font-weight: bold;
-            border: 2px solid #282828;
-        }
-    }
-
-    #navigation h1:hover {
-        animation: linkHover 0.5s;
-        -webkit-animation-fill-mode: forwards;
-    }
-
+  #navigation h1:hover {
+    animation: linkHover 0.5s;
+    -webkit-animation-fill-mode: forwards;
+  }
 }
