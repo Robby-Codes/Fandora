@@ -85,6 +85,7 @@
   height: 100%;
   width: 65%;
   padding: 10px;
+  overflow: hidden;
 }
 
 .checkout {
@@ -309,18 +310,14 @@ button:hover {
   /* Changes to Navigation*/
 
   #navigation-3 {
-    width: 90%;
+    width: 100%;
     padding: 5px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     top: 0;
-    left: 4%;
+    left: 0%;
     position: static;
-  }
-
-  #navigation-3 h1 {
-    height: 20px;
   }
 
   #navigation-3 h1:hover {
@@ -505,9 +502,16 @@ button:hover {
   }
 
   .cart-message {
-    font-size: 0.7em;
     text-align: center;
     margin-bottom: 5px;
+  }
+
+  .cart-message > h1 {
+    font-size: 0.8em;
+  }
+
+  .cart-message > p {
+    font-size: 0.6em;
   }
 
   .product-num {
@@ -528,23 +532,25 @@ button:hover {
     flex-direction: column;
     font-size: 0.8em;
     text-align: center;
+    padding: 2px;
   }
 
   .checkout div:nth-of-type(2) {
     font-size: 0.5em;
     justify-content: space-between;
+    padding: 2px;
   }
 
   .checkout div:nth-of-type(3) {
     font-size: 0.8em;
-    padding: 5px 0;
+    padding: 2px;
     flex-direction: column;
     text-align: center;
   }
 
   .checkout div:nth-of-type(4) {
     margin: 0;
-    padding: 5px;
+    padding: 2px;
   }
 
   .checkout div:nth-of-type(5) {
@@ -618,26 +624,23 @@ button:hover {
   #navigation-3 {
     width: 90%;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
-    top: 0;
+    top: 15px;
     left: 4%;
   }
 
   #navigation-3 h1 {
-    height: 20px;
+    height: 25px;
     font-size: 1em;
-  }
-
-  #navigation-3 h1:hover {
-    border: 2px solid transparent;
   }
 
   .nav-buttons-3,
   .nav-home-3 {
     font-size: 0.6em;
-    margin-right: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
 
   .nav-line-3 {
@@ -693,48 +696,12 @@ button:hover {
 
 /* Changes for laptops and desktop screens*/
 @media screen and (min-width: 1200px) and (max-width: 2000px) {
-  /* Changes to Navigation*/
+  /* Changes to Navigation */
 
   #navigation-3 {
-    width: 90%;
-    padding: 5px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0;
-    left: 4%;
-  }
-
-  #navigation-3 h1 {
-    height: 20px;
-    font-size: 1em;
-  }
-
-  #navigation-3 h1:hover {
-    border: 2px solid transparent;
-  }
-
-  .nav-buttons-3,
-  .nav-home-3 {
-    font-size: 0.6em;
-    margin-right: 0px;
-  }
-
-  .nav-line-3 {
-    height: 2px;
-    width: 90%;
-    background-color: #6e6e6e;
-    margin-bottom: 5px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .message-3 {
-    font-size: 0.7em;
-    width: 95%;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    width: 80%;
+    left: 0;
+    margin-left: 12%;
   }
 
   /* Changes to Cart and Checkout Section */
@@ -742,7 +709,11 @@ button:hover {
   #cart-and-checkout-section {
     height: 100vh;
     width: 100%;
-    padding: 80px 15% 20px 15%;
+    padding: 120px 15% 20px 15%;
     overflow: hidden;
+  }
+
+  .checkout {
+    margin-top: 10px;
   }
 }
