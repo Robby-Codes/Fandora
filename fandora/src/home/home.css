@@ -606,7 +606,10 @@ footer a {
 
   .car-container {
     height: auto;
+    width: 80%;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
     padding: 20px;
     box-shadow: 3px 3px 6px black;
   }
