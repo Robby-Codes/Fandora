@@ -241,7 +241,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="999,999,999.00"
           car_image={delorean}
-          btn_id={7}
+          btn_id={6}
           addCart={addCart}
         />
         <Product
@@ -249,7 +249,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="27,000.00"
           car_image={ford_thunderbird}
-          btn_id={8}
+          btn_id={7}
           addCart={addCart}
         />
         <Product
@@ -257,7 +257,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="14,500,000.00"
           car_image={mclaren_f1}
-          btn_id={9}
+          btn_id={8}
           addCart={addCart}
         />
         <Product
@@ -265,7 +265,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="2,500,000.00"
           car_image={peogeot_onyx}
-          btn_id={6}
+          btn_id={9}
           addCart={addCart}
         />
       </section>

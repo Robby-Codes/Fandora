@@ -972,7 +972,7 @@ footer a {
   #navigation-1 {
     top: 10px;
     width: 80%;
-    margin: 0 auto 0 8%;
+    margin: 0 auto 0 10%;
   }
 
   /* Changes to Intro Section */
@@ -1051,10 +1051,45 @@ footer a {
     left: 40%;
   }
 
+  .media {
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .media1,
+  .media2,
+  .media3 {
+    width: 33.33%;
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .quote h1 {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .quote button {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   /* Changes to Product Section */
 
   #product-section {
     padding: 150px 15% 0px 15%;
+  }
+
+  .car-content {
+    display: flex;
+    justify-content: space-between;
   }
 
   .car-info {

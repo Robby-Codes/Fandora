@@ -1,6 +1,6 @@
 /* NAVIGATION BAR ANIMATION ON SCROLL */
 
-const mark = document.getElementsByClassName("intro-review");
+const mark = document.getElementsByClassName("intro-button");
 
 navScroll(mark);
 
