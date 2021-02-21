@@ -3,20 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./homeanimations";
 import { data } from "../other/data";
-import mcar from "../assets/im1.png";
-import jet from "../assets/jet1.png";
-import star from "../assets/star.png";
-import ac_shelby_cobra from "../assets/ac-cobra.png";
-import audi_r8 from "../assets/audi-r8.png";
-import audi_r8_spyder from "../assets/audi-r8-spyder.png";
-import bugatti_chiron from "../assets/bugatti-chiron-.jpg";
-import chevrolet_camaro_ss from "../assets/chevrolet-camaro-ss.png";
-import delorean from "../assets/delorean.jpg";
-import ford_thunderbird from "../assets/ford-thinderbird-1961.png";
-import mclaren_f1 from "../assets/mclaren-f1-1994.jpg";
-import peogeot_onyx from "../assets/peogeot-onyx.png";
-import mc from "../assets/mc.png";
-import visa from "../assets/visa.png";
+import { images } from "../other/images";
 import "./home.css";
 
 // Main Home Page component, using framer motion for page transition animations
@@ -115,12 +102,12 @@ const IntroSection = () => {
             </div>
           </div>
           <div className="banner-image">
-            <img src={mcar} alt="image of car" />
+            <img src={images.mcar} alt="image of car" />
           </div>
           <div className="intro-bonus">
             <div className="bonus-image">
-              <img className="jet1" src={jet} />
-              <img className="jet2" src={jet} />
+              <img className="jet1" src={images.jet} />
+              <img className="jet2" src={images.jet} />
             </div>
             <div className="bonus-text">
               <h1>Jet Engine Augmentation</h1>
@@ -140,19 +127,19 @@ const IntroSection = () => {
               </div>
               <div className="media2">
                 <h1>THE MONDAY TIMES</h1>
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
               </div>
               <div className="media3">
                 <h1>YOUBAR</h1>
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
-                <img src={star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
+                <img src={images.star} />
               </div>
             </div>
             <div className="quote">
@@ -200,7 +187,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="AC SHELBY COBRA"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="170,000.00"
-          car_image={ac_shelby_cobra}
+          car_image={images.ac_shelby_cobra}
           btn_id={1}
           addCart={addCart}
         />
@@ -208,7 +195,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="AUDI R8"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="169,000.00"
-          car_image={audi_r8}
+          car_image={images.audi_r8}
           btn_id={2}
           addCart={addCart}
         />
@@ -216,7 +203,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="AUDI R8 SPYDER"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="219,445.00"
-          car_image={audi_r8_spyder}
+          car_image={images.audi_r8_spyder}
           btn_id={3}
           addCart={addCart}
         />
@@ -224,7 +211,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="BUGATTI CHIRON"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="3,000,000.00"
-          car_image={bugatti_chiron}
+          car_image={images.bugatti_chiron}
           btn_id={4}
           addCart={addCart}
         />
@@ -232,7 +219,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="CHEVROLET CAMARO SS"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="25,000.00"
-          car_image={chevrolet_camaro_ss}
+          car_image={images.chevrolet_camaro_ss}
           btn_id={5}
           addCart={addCart}
         />
@@ -240,7 +227,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="DELOREAN"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="999,999,999.00"
-          car_image={delorean}
+          car_image={images.delorean}
           btn_id={6}
           addCart={addCart}
         />
@@ -248,7 +235,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="FORD THUNDERBIRD 1961"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="27,000.00"
-          car_image={ford_thunderbird}
+          car_image={images.ford_thunderbird}
           btn_id={7}
           addCart={addCart}
         />
@@ -256,7 +243,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="MCLAREN F1 1994"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="14,500,000.00"
-          car_image={mclaren_f1}
+          car_image={images.mclaren_f1}
           btn_id={8}
           addCart={addCart}
         />
@@ -264,7 +251,7 @@ const ProductSection = ({ cart, setCart }) => {
           car_name="PEOGEOT ONYX"
           car_description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ducimus voluptatum, assumenda et dicta nostrum exercitationem deleniti officia quo ipsam veniam error tempore sunt? Debitis atque sit quia porro natus?"
           car_price="2,500,000.00"
-          car_image={peogeot_onyx}
+          car_image={images.peogeot_onyx}
           btn_id={9}
           addCart={addCart}
         />
@@ -369,8 +356,8 @@ const Footer = () => {
             </small>
           </div>
           <div className="footer-images">
-            <img src={mc} />
-            <img src={visa} />
+            <img src={images.mc} />
+            <img src={images.visa} />
           </div>
         </div>
       </footer>

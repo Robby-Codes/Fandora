@@ -3,15 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { data, totalAmount } from "../other/data";
 import { formatNumbers } from "../other/formatnumbers";
-import ac_shelby_cobra from "../assets/ac-cobra.png";
-import audi_r8 from "../assets/audi-r8.png";
-import audi_r8_spyder from "../assets/audi-r8-spyder.png";
-import bugatti_chiron from "../assets/bugatti-chiron-.jpg";
-import chevrolet_camaro_ss from "../assets/chevrolet-camaro-ss.png";
-import delorean from "../assets/delorean.jpg";
-import ford_thunderbird from "../assets/ford-thinderbird-1961.png";
-import mclaren_f1 from "../assets/mclaren-f1-1994.jpg";
-import peogeot_onyx from "../assets/peogeot-onyx.png";
+import { images } from "../other/images";
 import "./checkout.css";
 
 // Main Checkout Page Component, using framer motions for page transition animations
@@ -102,7 +94,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[1][0]}
             title={data[1][1]}
             price={data[1][2]}
-            image={ac_shelby_cobra}
+            image={images.ac_shelby_cobra}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -112,7 +104,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[2][0]}
             title={data[2][1]}
             price={data[2][2]}
-            image={audi_r8}
+            image={images.audi_r8}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -122,7 +114,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[3][0]}
             title={data[3][1]}
             price={data[3][2]}
-            image={audi_r8_spyder}
+            image={images.audi_r8_spyder}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -132,7 +124,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[4][0]}
             title={data[4][1]}
             price={data[4][2]}
-            image={bugatti_chiron}
+            image={images.bugatti_chiron}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -142,7 +134,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[5][0]}
             title={data[5][1]}
             price={data[5][2]}
-            image={chevrolet_camaro_ss}
+            image={images.chevrolet_camaro_ss}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -152,7 +144,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[6][0]}
             title={data[6][1]}
             price={data[6][2]}
-            image={delorean}
+            image={images.delorean}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -162,7 +154,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[7][0]}
             title={data[7][1]}
             price={data[7][2]}
-            image={ford_thunderbird}
+            image={images.ford_thunderbird}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -172,7 +164,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[8][0]}
             title={data[8][1]}
             price={data[8][2]}
-            image={mclaren_f1}
+            image={images.mclaren_f1}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
@@ -182,7 +174,7 @@ const Cart = ({ cartamount, setCartAmount }) => {
             action={data[9][0]}
             title={data[9][1]}
             price={data[9][2]}
-            image={peogeot_onyx}
+            image={images.peogeot_onyx}
             cartamount={cartamount}
             setCartAmount={setCartAmount}
             setTotalAmount={setTotalAmount}
