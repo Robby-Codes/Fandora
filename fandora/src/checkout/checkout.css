@@ -440,13 +440,13 @@ button:hover {
 }
 
 /*Changes to phones screens (landscape)*/
-@media screen and (min-width: 501px) and (max-width: 764px) {
+@media screen and (min-width: 501px) and (max-width: 916px) {
   /* Changes to Navigation*/
 
   #navigation-3 {
     width: 90%;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     top: 0;
@@ -489,7 +489,7 @@ button:hover {
 
   #cart-and-checkout-section {
     height: 100vh;
-    padding: 70px 5% 20px 5%;
+    padding: 90px 5% 5px 5%;
     overflow: hidden;
   }
 
@@ -618,7 +618,7 @@ button:hover {
 }
 
 /* Changes for intermediate screen sizes*/
-@media screen and (min-width: 765px) and (max-width: 1199px) {
+@media screen and (min-width: 917px) and (max-width: 1199px) {
   /* Changes to Navigation*/
 
   #navigation-3 {

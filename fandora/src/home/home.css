@@ -35,6 +35,14 @@ body {
   border: #282828 1px solid;
 }
 
+/* Removes blue highlights when buttons are pressed on mobile devices */
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 /* Navigation */
 
 #navigation-1 {
@@ -445,11 +453,11 @@ footer a {
   /* Changes to Nav Bar */
 
   #navigation-1 {
-    width: 90%;
-    margin: 30px auto 0 auto;
-    padding: 5px;
-    margin: 10px auto 0 15px;
-    position: static;
+    width: 95%;
+    margin-top: 10px;
+    left: -18%;
+    padding: 2px;
+    border-radius: 10px;
   }
 
   #navigation-1 h1:hover {
@@ -478,7 +486,8 @@ footer a {
   /* Changes to Introduction Section */
 
   #intro-section {
-    padding: 20px 0px 20px 30px;
+    padding: 100px 10px 20px 10px;
+    overflow: hidden;
   }
 
   .intro-content-container > h1 {
@@ -600,13 +609,15 @@ footer a {
   }
 
   #product-section > h1 {
+    width: 100%;
+    text-align: center;
     font-size: 2em;
     margin-bottom: 50px;
   }
 
   .car-container {
     height: auto;
-    width: 80%;
+    width: 90%;
     margin-bottom: 30px;
     margin-right: auto;
     margin-left: auto;
@@ -712,13 +723,13 @@ footer a {
 }
 
 /*Changes to phones screens (landscape)*/
-@media screen and (min-width: 501px) and (max-width: 764px) {
+@media screen and (min-width: 501px) and (max-width: 916px) {
   /* Changes to Navigation */
 
   #navigation-1 {
-    position: static;
     width: 90%;
-    margin: 20px auto 0 auto;
+    margin-top: 30px;
+    left: -18%;
     padding: 5px;
   }
 
@@ -748,7 +759,7 @@ footer a {
   /* Changes to Introduction Section */
 
   #intro-section {
-    padding: 20px 10px 10px 30px;
+    padding: 140px 10px 10px 30px;
   }
 
   .intro-content-container > h1 {
@@ -786,7 +797,7 @@ footer a {
   }
 
   .banner-image {
-    height: 50px;
+    height: 70px;
   }
 
   .banner-image img {
@@ -886,7 +897,7 @@ footer a {
 
   .car-image {
     height: 100%;
-    width: auto;
+    width: 50%;
   }
 
   .car-image img {
@@ -966,7 +977,7 @@ footer a {
 }
 
 /* Changes for intermediate screen sizes*/
-@media screen and (min-width: 765px) and (max-width: 1199px) {
+@media screen and (min-width: 917px) and (max-width: 1199px) {
   /* Changes to Navigation */
 
   #navigation-1 {

@@ -73,7 +73,7 @@
 
 #log-in-section {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,10 +88,13 @@
   border: 5px solid #282828;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #282828;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.form-container {
+  transform: translate(50%);
 }
 
 @keyframes moveForm {
@@ -99,7 +102,7 @@
     transform: translate(200%, 0);
   }
   100% {
-    transform: translate(0%, 0);
+    transform: translate(50%, 0);
   }
 }
 
@@ -258,7 +261,7 @@ input[type="submit"]:hover {
   /* Changes to Navigation*/
 
   #navigation-2 {
-    width: 80%;
+    width: 95%;
     padding: 5px;
     margin-top: 10px;
     top: 0;
@@ -296,7 +299,7 @@ input[type="submit"]:hover {
 
   #log-in-section {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     padding-top: 70px;
   }
@@ -304,11 +307,9 @@ input[type="submit"]:hover {
   .form-container,
   .register-container {
     font-size: 0.6em;
-    width: 95%;
-    height: auto;
+    width: 98%;
+    height: 35%;
     padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .form-container > h1,
@@ -353,13 +354,13 @@ input[type="submit"]:hover {
 }
 
 /*Changes to phones screens (landscape)*/
-@media screen and (min-width: 501px) and (max-width: 764px) {
+@media screen and (min-width: 501px) and (max-width: 916px) {
   /* Changes to Navigation*/
 
   #navigation-2 {
-    width: 38%;
+    width: 70%;
     padding: 5px;
-    margin-top: 10px;
+    margin-top: 30px;
     top: 0;
     margin-left: 2%;
   }
@@ -395,7 +396,7 @@ input[type="submit"]:hover {
 
   #log-in-section {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     padding-top: 90px;
   }
@@ -404,7 +405,7 @@ input[type="submit"]:hover {
   .register-container {
     font-size: 0.6em;
     width: 50%;
-    height: 70%;
+    height: 80%;
     padding: 5px;
   }
 
@@ -450,7 +451,7 @@ input[type="submit"]:hover {
 }
 
 /* Changes for intermediate screen sizes*/
-@media screen and (min-width: 765px) and (max-width: 1199px) {
+@media screen and (min-width: 917px) and (max-width: 1199px) {
   /* Changes to Navigation */
 
   #navigation-2 {

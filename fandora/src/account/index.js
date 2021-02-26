@@ -65,7 +65,7 @@ const LogInSection = () => {
     document.getElementsByClassName("register-container")[0].style.transition =
       "all 1s";
     document.getElementsByClassName("register-container")[0].style.transform =
-      "translate(0%, 0)";
+      "translate(-50%, 0)";
   };
   return (
     <div className="form-container">
@@ -101,7 +101,7 @@ const RegisterSection = () => {
     document.getElementsByClassName("form-container")[0].style.transition =
       "all 1s";
     document.getElementsByClassName("form-container")[0].style.transform =
-      "translate(0%, 0)";
+      "translate(50%, 0)";
     document.getElementsByClassName("register-container")[0].style.transition =
       "all 1s";
     document.getElementsByClassName("register-container")[0].style.transform =

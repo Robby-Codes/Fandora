@@ -7,25 +7,23 @@ navScroll(mark);
 function navScroll(element) {
   var windowHeight = window.innerHeight;
   var windowWidth = window.innerWidth;
-  if (windowWidth > 764) {
-    window.addEventListener("scroll", () => {
-      for (var x = 0; x < element.length; x++) {
-        var elem = element[x];
-        var position = element[x].getBoundingClientRect().top;
-        if (position - windowHeight <= 0) {
-          const nav = document.getElementById("navigation-1");
-          nav.style.transition = "all 0.5s";
-          nav.style.backgroundColor = "#f5f5f5";
-          nav.style.border = "5px solid #282828";
-        } else if (position - windowHeight > 0) {
-          const nav = document.getElementById("navigation-1");
-          nav.style.transition = "all 0.5s";
-          nav.style.backgroundColor = "transparent";
-          nav.style.borderColor = "transparent";
-        }
+  window.addEventListener("scroll", () => {
+    for (var x = 0; x < element.length; x++) {
+      var elem = element[x];
+      var position = element[x].getBoundingClientRect().top;
+      if (position - windowHeight <= 0) {
+        const nav = document.getElementById("navigation-1");
+        nav.style.transition = "all 0.5s";
+        nav.style.backgroundColor = "#f5f5f5";
+        nav.style.border = "5px solid #282828";
+      } else if (position - windowHeight > 0) {
+        const nav = document.getElementById("navigation-1");
+        nav.style.transition = "all 0.5s";
+        nav.style.backgroundColor = "transparent";
+        nav.style.borderColor = "transparent";
       }
-    });
-  }
+    }
+  });
 }
 
 /* CAR IMAGE ANIMATION ON SCROLL */
