@@ -1,4 +1,4 @@
-/* Navigation */
+/* navigation-2*/
 
 #navigation-2 {
   width: 60%;
@@ -239,7 +239,7 @@ input[type="submit"]:hover {
   -webkit-animation-fill-mode: forwards;
 }
 
-/* Navigation Bar Link Animations */
+/* navigation-2Bar Link Animations */
 
 @keyframes linkHover {
   from {
@@ -251,7 +251,7 @@ input[type="submit"]:hover {
   }
 }
 
-#navigation h1:hover {
+#navigation-2h1:hover {
   animation: linkHover 0.5s;
   -webkit-animation-fill-mode: forwards;
 }
@@ -405,7 +405,7 @@ input[type="submit"]:hover {
   .register-container {
     font-size: 0.6em;
     width: 50%;
-    height: 80%;
+    height: 90%;
     padding: 5px;
   }
 
@@ -452,7 +452,7 @@ input[type="submit"]:hover {
 
 /* Changes for intermediate screen sizes*/
 @media screen and (min-width: 917px) and (max-width: 1199px) {
-  /* Changes to Navigation */
+  /* Changes to navigation-2*/
 
   #navigation-2 {
     width: 80%;
@@ -506,7 +506,7 @@ input[type="submit"]:hover {
 
 /* Changes for laptops and desktop screens*/
 @media screen and (min-width: 1200px) and (max-width: 2000px) {
-  /* Changes to Navigation */
+  /* Changes to navigation-2*/
 
   #navigation-2 {
     width: 60%;
